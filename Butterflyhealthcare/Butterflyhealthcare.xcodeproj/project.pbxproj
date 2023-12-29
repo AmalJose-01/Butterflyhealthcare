@@ -1,0 +1,623 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E321EDA92B3ECA2C00F5D3D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EDA82B3ECA2C00F5D3D3 /* AppDelegate.swift */; };
+		E321EDAB2B3ECA2C00F5D3D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EDAA2B3ECA2C00F5D3D3 /* SceneDelegate.swift */; };
+		E321EDAD2B3ECA2C00F5D3D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EDAC2B3ECA2C00F5D3D3 /* ViewController.swift */; };
+		E321EDB02B3ECA2C00F5D3D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E321EDAE2B3ECA2C00F5D3D3 /* Main.storyboard */; };
+		E321EDB32B3ECA2C00F5D3D3 /* Butterflyhealthcare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E321EDB12B3ECA2C00F5D3D3 /* Butterflyhealthcare.xcdatamodeld */; };
+		E321EDB52B3ECA2E00F5D3D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E321EDB42B3ECA2E00F5D3D3 /* Assets.xcassets */; };
+		E321EDB82B3ECA2E00F5D3D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E321EDB62B3ECA2E00F5D3D3 /* LaunchScreen.storyboard */; };
+		E321EDC32B3ECA2E00F5D3D3 /* ButterflyhealthcareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EDC22B3ECA2E00F5D3D3 /* ButterflyhealthcareTests.swift */; };
+		E321EDCD2B3ECA2E00F5D3D3 /* ButterflyhealthcareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EDCC2B3ECA2E00F5D3D3 /* ButterflyhealthcareUITests.swift */; };
+		E321EDCF2B3ECA2E00F5D3D3 /* ButterflyhealthcareUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EDCE2B3ECA2E00F5D3D3 /* ButterflyhealthcareUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E321EDBF2B3ECA2E00F5D3D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E321ED9D2B3ECA2C00F5D3D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E321EDA42B3ECA2C00F5D3D3;
+			remoteInfo = Butterflyhealthcare;
+		};
+		E321EDC92B3ECA2E00F5D3D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E321ED9D2B3ECA2C00F5D3D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E321EDA42B3ECA2C00F5D3D3;
+			remoteInfo = Butterflyhealthcare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E321EDA52B3ECA2C00F5D3D3 /* Butterflyhealthcare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Butterflyhealthcare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E321EDA82B3ECA2C00F5D3D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E321EDAA2B3ECA2C00F5D3D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E321EDAC2B3ECA2C00F5D3D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E321EDAF2B3ECA2C00F5D3D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E321EDB22B3ECA2C00F5D3D3 /* Butterflyhealthcare.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Butterflyhealthcare.xcdatamodel; sourceTree = "<group>"; };
+		E321EDB42B3ECA2E00F5D3D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E321EDB72B3ECA2E00F5D3D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E321EDB92B3ECA2E00F5D3D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E321EDBE2B3ECA2E00F5D3D3 /* ButterflyhealthcareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ButterflyhealthcareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E321EDC22B3ECA2E00F5D3D3 /* ButterflyhealthcareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButterflyhealthcareTests.swift; sourceTree = "<group>"; };
+		E321EDC82B3ECA2E00F5D3D3 /* ButterflyhealthcareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ButterflyhealthcareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E321EDCC2B3ECA2E00F5D3D3 /* ButterflyhealthcareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButterflyhealthcareUITests.swift; sourceTree = "<group>"; };
+		E321EDCE2B3ECA2E00F5D3D3 /* ButterflyhealthcareUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButterflyhealthcareUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E321EDA22B3ECA2C00F5D3D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E321EDBB2B3ECA2E00F5D3D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E321EDC52B3ECA2E00F5D3D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E321ED9C2B3ECA2C00F5D3D3 = {
+			isa = PBXGroup;
+			children = (
+				E321EDA72B3ECA2C00F5D3D3 /* Butterflyhealthcare */,
+				E321EDC12B3ECA2E00F5D3D3 /* ButterflyhealthcareTests */,
+				E321EDCB2B3ECA2E00F5D3D3 /* ButterflyhealthcareUITests */,
+				E321EDA62B3ECA2C00F5D3D3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E321EDA62B3ECA2C00F5D3D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E321EDA52B3ECA2C00F5D3D3 /* Butterflyhealthcare.app */,
+				E321EDBE2B3ECA2E00F5D3D3 /* ButterflyhealthcareTests.xctest */,
+				E321EDC82B3ECA2E00F5D3D3 /* ButterflyhealthcareUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E321EDA72B3ECA2C00F5D3D3 /* Butterflyhealthcare */ = {
+			isa = PBXGroup;
+			children = (
+				E321EDA82B3ECA2C00F5D3D3 /* AppDelegate.swift */,
+				E321EDAA2B3ECA2C00F5D3D3 /* SceneDelegate.swift */,
+				E321EDAC2B3ECA2C00F5D3D3 /* ViewController.swift */,
+				E321EDAE2B3ECA2C00F5D3D3 /* Main.storyboard */,
+				E321EDB42B3ECA2E00F5D3D3 /* Assets.xcassets */,
+				E321EDB62B3ECA2E00F5D3D3 /* LaunchScreen.storyboard */,
+				E321EDB92B3ECA2E00F5D3D3 /* Info.plist */,
+				E321EDB12B3ECA2C00F5D3D3 /* Butterflyhealthcare.xcdatamodeld */,
+			);
+			path = Butterflyhealthcare;
+			sourceTree = "<group>";
+		};
+		E321EDC12B3ECA2E00F5D3D3 /* ButterflyhealthcareTests */ = {
+			isa = PBXGroup;
+			children = (
+				E321EDC22B3ECA2E00F5D3D3 /* ButterflyhealthcareTests.swift */,
+			);
+			path = ButterflyhealthcareTests;
+			sourceTree = "<group>";
+		};
+		E321EDCB2B3ECA2E00F5D3D3 /* ButterflyhealthcareUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E321EDCC2B3ECA2E00F5D3D3 /* ButterflyhealthcareUITests.swift */,
+				E321EDCE2B3ECA2E00F5D3D3 /* ButterflyhealthcareUITestsLaunchTests.swift */,
+			);
+			path = ButterflyhealthcareUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E321EDA42B3ECA2C00F5D3D3 /* Butterflyhealthcare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E321EDD22B3ECA2E00F5D3D3 /* Build configuration list for PBXNativeTarget "Butterflyhealthcare" */;
+			buildPhases = (
+				E321EDA12B3ECA2C00F5D3D3 /* Sources */,
+				E321EDA22B3ECA2C00F5D3D3 /* Frameworks */,
+				E321EDA32B3ECA2C00F5D3D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Butterflyhealthcare;
+			productName = Butterflyhealthcare;
+			productReference = E321EDA52B3ECA2C00F5D3D3 /* Butterflyhealthcare.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E321EDBD2B3ECA2E00F5D3D3 /* ButterflyhealthcareTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E321EDD52B3ECA2E00F5D3D3 /* Build configuration list for PBXNativeTarget "ButterflyhealthcareTests" */;
+			buildPhases = (
+				E321EDBA2B3ECA2E00F5D3D3 /* Sources */,
+				E321EDBB2B3ECA2E00F5D3D3 /* Frameworks */,
+				E321EDBC2B3ECA2E00F5D3D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E321EDC02B3ECA2E00F5D3D3 /* PBXTargetDependency */,
+			);
+			name = ButterflyhealthcareTests;
+			productName = ButterflyhealthcareTests;
+			productReference = E321EDBE2B3ECA2E00F5D3D3 /* ButterflyhealthcareTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E321EDC72B3ECA2E00F5D3D3 /* ButterflyhealthcareUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E321EDD82B3ECA2E00F5D3D3 /* Build configuration list for PBXNativeTarget "ButterflyhealthcareUITests" */;
+			buildPhases = (
+				E321EDC42B3ECA2E00F5D3D3 /* Sources */,
+				E321EDC52B3ECA2E00F5D3D3 /* Frameworks */,
+				E321EDC62B3ECA2E00F5D3D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E321EDCA2B3ECA2E00F5D3D3 /* PBXTargetDependency */,
+			);
+			name = ButterflyhealthcareUITests;
+			productName = ButterflyhealthcareUITests;
+			productReference = E321EDC82B3ECA2E00F5D3D3 /* ButterflyhealthcareUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E321ED9D2B3ECA2C00F5D3D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					E321EDA42B3ECA2C00F5D3D3 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					E321EDBD2B3ECA2E00F5D3D3 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = E321EDA42B3ECA2C00F5D3D3;
+					};
+					E321EDC72B3ECA2E00F5D3D3 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = E321EDA42B3ECA2C00F5D3D3;
+					};
+				};
+			};
+			buildConfigurationList = E321EDA02B3ECA2C00F5D3D3 /* Build configuration list for PBXProject "Butterflyhealthcare" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E321ED9C2B3ECA2C00F5D3D3;
+			productRefGroup = E321EDA62B3ECA2C00F5D3D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E321EDA42B3ECA2C00F5D3D3 /* Butterflyhealthcare */,
+				E321EDBD2B3ECA2E00F5D3D3 /* ButterflyhealthcareTests */,
+				E321EDC72B3ECA2E00F5D3D3 /* ButterflyhealthcareUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E321EDA32B3ECA2C00F5D3D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E321EDB82B3ECA2E00F5D3D3 /* LaunchScreen.storyboard in Resources */,
+				E321EDB52B3ECA2E00F5D3D3 /* Assets.xcassets in Resources */,
+				E321EDB02B3ECA2C00F5D3D3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E321EDBC2B3ECA2E00F5D3D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E321EDC62B3ECA2E00F5D3D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E321EDA12B3ECA2C00F5D3D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E321EDB32B3ECA2C00F5D3D3 /* Butterflyhealthcare.xcdatamodeld in Sources */,
+				E321EDAD2B3ECA2C00F5D3D3 /* ViewController.swift in Sources */,
+				E321EDA92B3ECA2C00F5D3D3 /* AppDelegate.swift in Sources */,
+				E321EDAB2B3ECA2C00F5D3D3 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E321EDBA2B3ECA2E00F5D3D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E321EDC32B3ECA2E00F5D3D3 /* ButterflyhealthcareTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E321EDC42B3ECA2E00F5D3D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E321EDCD2B3ECA2E00F5D3D3 /* ButterflyhealthcareUITests.swift in Sources */,
+				E321EDCF2B3ECA2E00F5D3D3 /* ButterflyhealthcareUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E321EDC02B3ECA2E00F5D3D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E321EDA42B3ECA2C00F5D3D3 /* Butterflyhealthcare */;
+			targetProxy = E321EDBF2B3ECA2E00F5D3D3 /* PBXContainerItemProxy */;
+		};
+		E321EDCA2B3ECA2E00F5D3D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E321EDA42B3ECA2C00F5D3D3 /* Butterflyhealthcare */;
+			targetProxy = E321EDC92B3ECA2E00F5D3D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E321EDAE2B3ECA2C00F5D3D3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E321EDAF2B3ECA2C00F5D3D3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E321EDB62B3ECA2E00F5D3D3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E321EDB72B3ECA2E00F5D3D3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E321EDD02B3ECA2E00F5D3D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E321EDD12B3ECA2E00F5D3D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E321EDD32B3ECA2E00F5D3D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Butterflyhealthcare/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Amaljvv-gmail.com.Butterflyhealthcare";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E321EDD42B3ECA2E00F5D3D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Butterflyhealthcare/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Amaljvv-gmail.com.Butterflyhealthcare";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E321EDD62B3ECA2E00F5D3D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Amaljvv-gmail.com.ButterflyhealthcareTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Butterflyhealthcare.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Butterflyhealthcare";
+			};
+			name = Debug;
+		};
+		E321EDD72B3ECA2E00F5D3D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Amaljvv-gmail.com.ButterflyhealthcareTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Butterflyhealthcare.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Butterflyhealthcare";
+			};
+			name = Release;
+		};
+		E321EDD92B3ECA2E00F5D3D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Amaljvv-gmail.com.ButterflyhealthcareUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Butterflyhealthcare;
+			};
+			name = Debug;
+		};
+		E321EDDA2B3ECA2E00F5D3D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Amaljvv-gmail.com.ButterflyhealthcareUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Butterflyhealthcare;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E321EDA02B3ECA2C00F5D3D3 /* Build configuration list for PBXProject "Butterflyhealthcare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E321EDD02B3ECA2E00F5D3D3 /* Debug */,
+				E321EDD12B3ECA2E00F5D3D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E321EDD22B3ECA2E00F5D3D3 /* Build configuration list for PBXNativeTarget "Butterflyhealthcare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E321EDD32B3ECA2E00F5D3D3 /* Debug */,
+				E321EDD42B3ECA2E00F5D3D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E321EDD52B3ECA2E00F5D3D3 /* Build configuration list for PBXNativeTarget "ButterflyhealthcareTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E321EDD62B3ECA2E00F5D3D3 /* Debug */,
+				E321EDD72B3ECA2E00F5D3D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E321EDD82B3ECA2E00F5D3D3 /* Build configuration list for PBXNativeTarget "ButterflyhealthcareUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E321EDD92B3ECA2E00F5D3D3 /* Debug */,
+				E321EDDA2B3ECA2E00F5D3D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E321EDB12B3ECA2C00F5D3D3 /* Butterflyhealthcare.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E321EDB22B3ECA2C00F5D3D3 /* Butterflyhealthcare.xcdatamodel */,
+			);
+			currentVersion = E321EDB22B3ECA2C00F5D3D3 /* Butterflyhealthcare.xcdatamodel */;
+			path = Butterflyhealthcare.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E321ED9D2B3ECA2C00F5D3D3 /* Project object */;
+}
