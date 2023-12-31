@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E321EDA92B3ECA2C00F5D3D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EDA82B3ECA2C00F5D3D3 /* AppDelegate.swift */; };
 		E321EDAB2B3ECA2C00F5D3D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EDAA2B3ECA2C00F5D3D3 /* SceneDelegate.swift */; };
-		E321EDAD2B3ECA2C00F5D3D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EDAC2B3ECA2C00F5D3D3 /* ViewController.swift */; };
 		E321EDB02B3ECA2C00F5D3D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E321EDAE2B3ECA2C00F5D3D3 /* Main.storyboard */; };
 		E321EDB32B3ECA2C00F5D3D3 /* Butterflyhealthcare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E321EDB12B3ECA2C00F5D3D3 /* Butterflyhealthcare.xcdatamodeld */; };
 		E321EDB52B3ECA2E00F5D3D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E321EDB42B3ECA2E00F5D3D3 /* Assets.xcassets */; };
@@ -17,6 +16,12 @@
 		E321EDC32B3ECA2E00F5D3D3 /* ButterflyhealthcareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EDC22B3ECA2E00F5D3D3 /* ButterflyhealthcareTests.swift */; };
 		E321EDCD2B3ECA2E00F5D3D3 /* ButterflyhealthcareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EDCC2B3ECA2E00F5D3D3 /* ButterflyhealthcareUITests.swift */; };
 		E321EDCF2B3ECA2E00F5D3D3 /* ButterflyhealthcareUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EDCE2B3ECA2E00F5D3D3 /* ButterflyhealthcareUITestsLaunchTests.swift */; };
+		E321EE132B3FAB5A00F5D3D3 /* UtilReach.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EE112B3FAB5A00F5D3D3 /* UtilReach.swift */; };
+		E321EE142B3FAB5A00F5D3D3 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EE122B3FAB5A00F5D3D3 /* Reach.swift */; };
+		E321EE1B2B41114000F5D3D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EE1A2B41114000F5D3D3 /* ViewController.swift */; };
+		E321EE1D2B41131000F5D3D3 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EE1C2B41131000F5D3D3 /* MovieViewModel.swift */; };
+		E321EE1F2B41141D00F5D3D3 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EE1E2B41141D00F5D3D3 /* MovieModel.swift */; };
+		E321EE222B41187700F5D3D3 /* CommonNetworkSwiftClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EE212B41187700F5D3D3 /* CommonNetworkSwiftClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +45,6 @@
 		E321EDA52B3ECA2C00F5D3D3 /* Butterflyhealthcare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Butterflyhealthcare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E321EDA82B3ECA2C00F5D3D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E321EDAA2B3ECA2C00F5D3D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E321EDAC2B3ECA2C00F5D3D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E321EDAF2B3ECA2C00F5D3D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E321EDB22B3ECA2C00F5D3D3 /* Butterflyhealthcare.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Butterflyhealthcare.xcdatamodel; sourceTree = "<group>"; };
 		E321EDB42B3ECA2E00F5D3D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +55,12 @@
 		E321EDC82B3ECA2E00F5D3D3 /* ButterflyhealthcareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ButterflyhealthcareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E321EDCC2B3ECA2E00F5D3D3 /* ButterflyhealthcareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButterflyhealthcareUITests.swift; sourceTree = "<group>"; };
 		E321EDCE2B3ECA2E00F5D3D3 /* ButterflyhealthcareUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButterflyhealthcareUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E321EE112B3FAB5A00F5D3D3 /* UtilReach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilReach.swift; sourceTree = "<group>"; };
+		E321EE122B3FAB5A00F5D3D3 /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
+		E321EE1A2B41114000F5D3D3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E321EE1C2B41131000F5D3D3 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		E321EE1E2B41141D00F5D3D3 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		E321EE212B41187700F5D3D3 /* CommonNetworkSwiftClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonNetworkSwiftClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +111,10 @@
 		E321EDA72B3ECA2C00F5D3D3 /* Butterflyhealthcare */ = {
 			isa = PBXGroup;
 			children = (
+				E321EE152B410D2100F5D3D3 /* Movie */,
+				E321EE0F2B3FAAB300F5D3D3 /* CommonClasses */,
 				E321EDA82B3ECA2C00F5D3D3 /* AppDelegate.swift */,
 				E321EDAA2B3ECA2C00F5D3D3 /* SceneDelegate.swift */,
-				E321EDAC2B3ECA2C00F5D3D3 /* ViewController.swift */,
 				E321EDAE2B3ECA2C00F5D3D3 /* Main.storyboard */,
 				E321EDB42B3ECA2E00F5D3D3 /* Assets.xcassets */,
 				E321EDB62B3ECA2E00F5D3D3 /* LaunchScreen.storyboard */,
@@ -128,6 +139,66 @@
 				E321EDCE2B3ECA2E00F5D3D3 /* ButterflyhealthcareUITestsLaunchTests.swift */,
 			);
 			path = ButterflyhealthcareUITests;
+			sourceTree = "<group>";
+		};
+		E321EE0F2B3FAAB300F5D3D3 /* CommonClasses */ = {
+			isa = PBXGroup;
+			children = (
+				E321EE202B41187700F5D3D3 /* Network */,
+				E321EE102B3FAAD000F5D3D3 /* Reachability */,
+			);
+			path = CommonClasses;
+			sourceTree = "<group>";
+		};
+		E321EE102B3FAAD000F5D3D3 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				E321EE122B3FAB5A00F5D3D3 /* Reach.swift */,
+				E321EE112B3FAB5A00F5D3D3 /* UtilReach.swift */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		E321EE152B410D2100F5D3D3 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				E321EE192B41102500F5D3D3 /* ViewModel */,
+				E321EE172B41100E00F5D3D3 /* Model */,
+				E321EE162B41100000F5D3D3 /* Controller */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		E321EE162B41100000F5D3D3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E321EE1A2B41114000F5D3D3 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E321EE172B41100E00F5D3D3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E321EE1E2B41141D00F5D3D3 /* MovieModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E321EE192B41102500F5D3D3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E321EE1C2B41131000F5D3D3 /* MovieViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E321EE202B41187700F5D3D3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E321EE212B41187700F5D3D3 /* CommonNetworkSwiftClass.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +332,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E321EE222B41187700F5D3D3 /* CommonNetworkSwiftClass.swift in Sources */,
+				E321EE1B2B41114000F5D3D3 /* ViewController.swift in Sources */,
 				E321EDB32B3ECA2C00F5D3D3 /* Butterflyhealthcare.xcdatamodeld in Sources */,
-				E321EDAD2B3ECA2C00F5D3D3 /* ViewController.swift in Sources */,
+				E321EE142B3FAB5A00F5D3D3 /* Reach.swift in Sources */,
+				E321EE132B3FAB5A00F5D3D3 /* UtilReach.swift in Sources */,
+				E321EE1F2B41141D00F5D3D3 /* MovieModel.swift in Sources */,
 				E321EDA92B3ECA2C00F5D3D3 /* AppDelegate.swift in Sources */,
+				E321EE1D2B41131000F5D3D3 /* MovieViewModel.swift in Sources */,
 				E321EDAB2B3ECA2C00F5D3D3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
