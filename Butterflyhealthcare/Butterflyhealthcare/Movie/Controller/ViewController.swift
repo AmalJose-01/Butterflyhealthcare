@@ -63,13 +63,14 @@ func getMovieList(){
             let MovieResponse = try JSONDecoder().decode(MovieModel.MovieResponse.self, from: outputData)
             
             
-//            self.MFAviewModel.MovieList.value = MovieResponse.results?.compactMap({
-//                MovieViewModel.MovieResultViewModelStruct(adult: $0.adult ?? true, backdropPath: $0.backdropPath ?? "", genreids: $0.genreids , id: $0.id ?? 0, originalLanguage: $0.originalLanguage , originalTitle: $0.originalTitle ?? "", overview: $0.overview ?? "", popularity: $0.popularity ?? 0, posterPath: $0.posterPath ?? "",releaseDate: $0.releaseDate ?? "" , title: $0.title ?? "", video: $0.video ?? true, voteAverage: $0.voteAverage ?? 0, voteCount: $0.voteCount ?? 0)
-//            })
+            self.MFAviewModel.MovieList.value = MovieResponse.results?.compactMap({
+                MovieViewModel.MovieResultViewModelStruct(adult: $0.adult ?? true, backdropPath: $0.backdropPath ?? "", genreids: $0.genreids , id: $0.id ?? 0, originalLanguage: $0.originalLanguage , originalTitle: $0.originalTitle ?? "", overview: $0.overview ?? "", popularity: $0.popularity ?? 0, posterPath: $0.posterPath ?? "",releaseDate: $0.releaseDate ?? "" , title: $0.title ?? "", video: $0.video ?? true, voteAverage: $0.voteAverage ?? 0, voteCount: $0.voteCount ?? 0)
+            })
             
                 
             DispatchQueue.main.async {
                 SVProgressHUD.dismiss()
+                self.tbl_MovieList.reloadData()
             }
         } catch {
               print("Error print \(error.localizedDescription)")
@@ -82,54 +83,54 @@ func getMovieList(){
 
 }
 
-//
-//// MARK: TABLEVIEW DELEGATES STARTS
-//extension ViewController:UITableViewDataSource,UITableViewDelegate{
-//    
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1;
-//    }
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 1;
-//    }
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return CGFloat.leastNonzeroMagnitude
-//    }
-//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat{
-//        if ( section == 0) {
-//            return 30
-//        }else if (section == 2 ) {
-//            return 40
-//        }else{
-//            return 10;
-//        }
-//    }
-//    
-//    func tableView(_ tableView: UITableView,cellForRowAt indexPath: IndexPath)-> UITableViewCell {
-//        if (indexPath.section == 0) // Profile Header
-//        {
-//            let customCell: MovieListCell = tableView.dequeueReusableCell(for: indexPath)
-//            customCell.selectionStyle = UITableViewCell.SelectionStyle.none
-//            customCell.accessoryType = UITableViewCell.AccessoryType.none
-//            //          customCell.delegate=self
-//            return customCell
-//        }else{
-//            let customCell: MovieListCell = tableView.dequeueReusableCell(for: indexPath)
-////            customCell.configure(with: "START", indexpath: indexPath as NSIndexPath , keyboardType: .default, fromClass: "", isViewMode: 0)
-//            customCell.selectionStyle = UITableViewCell.SelectionStyle.none
-//            customCell.accessoryType = UITableViewCell.AccessoryType.none
-////            customCell.delegate=self
-//            return customCell
-//        }
-//    }
-//    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableView.automaticDimension
-//        
-//    }
-//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableView.automaticDimension
-//    }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//    }
-//}
+
+// MARK: TABLEVIEW DELEGATES STARTS
+extension ViewController:UITableViewDataSource,UITableViewDelegate{
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1;
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return  self.MFAviewModel.MovieList.value?.count ?? 0 ;
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat.leastNonzeroMagnitude
+    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat{
+        if ( section == 0) {
+            return 30
+        }else if (section == 2 ) {
+            return 40
+        }else{
+            return 10;
+        }
+    }
+    
+    func tableView(_ tableView: UITableView,cellForRowAt indexPath: IndexPath)-> UITableViewCell {
+        if (indexPath.section == 0) // Profile Header
+        {
+            let customCell: MovieListCell = tableView.dequeueReusableCell(for: indexPath)
+            customCell.selectionStyle = UITableViewCell.SelectionStyle.none
+            customCell.accessoryType = UITableViewCell.AccessoryType.none
+            //          customCell.delegate=self
+            return customCell
+        }else{
+            let customCell: MovieListCell = tableView.dequeueReusableCell(for: indexPath)
+//            customCell.configure(with: "START", indexpath: indexPath as NSIndexPath , keyboardType: .default, fromClass: "", isViewMode: 0)
+            customCell.selectionStyle = UITableViewCell.SelectionStyle.none
+            customCell.accessoryType = UITableViewCell.AccessoryType.none
+//            customCell.delegate=self
+            return customCell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+        
+    }
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+}

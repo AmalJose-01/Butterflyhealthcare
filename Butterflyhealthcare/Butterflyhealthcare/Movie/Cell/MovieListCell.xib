@@ -8,11 +8,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieListCell" rowHeight="77" id="E47-Ss-BP5" customClass="MovieListCell" customModule="Butterflyhealthcare" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieListCell" rowHeight="98" id="E47-Ss-BP5" customClass="MovieListCell" customModule="Butterflyhealthcare" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E47-Ss-BP5" id="IQG-0Y-imf">
-                <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
+                <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4aO-yk-owA">
@@ -64,7 +64,7 @@
                     <constraint firstAttribute="trailing" secondItem="4aO-yk-owA" secondAttribute="trailing" constant="10" id="Pdz-3d-zb2"/>
                     <constraint firstItem="4aO-yk-owA" firstAttribute="top" secondItem="IQG-0Y-imf" secondAttribute="top" id="Qyp-34-Q6C"/>
                     <constraint firstItem="4aO-yk-owA" firstAttribute="leading" secondItem="IQG-0Y-imf" secondAttribute="leading" constant="10" id="dZ9-y0-sod"/>
-                    <constraint firstAttribute="bottom" secondItem="4aO-yk-owA" secondAttribute="bottom" id="eS8-aC-AaI"/>
+                    <constraint firstAttribute="bottom" secondItem="4aO-yk-owA" secondAttribute="bottom" constant="10" id="lh4-3K-OHb"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -73,7 +73,7 @@
                 <outlet property="lbl_EmployeeName" destination="QsR-9U-F1J" id="rOO-Q5-2Yf"/>
                 <outlet property="lbl_EmployeejobTitle" destination="YNB-Pg-eSu" id="QWP-jj-xCa"/>
             </connections>
-            <point key="canvasLocation" x="-184" y="-15"/>
+            <point key="canvasLocation" x="-185.49618320610685" y="-8.0985915492957758"/>
         </tableViewCell>
     </objects>
 </document>
