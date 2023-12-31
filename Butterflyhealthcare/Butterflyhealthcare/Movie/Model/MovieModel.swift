@@ -24,11 +24,12 @@ class MovieModel: NSObject {
         }
     }
 
+
     // MARK: - Result
     struct Result: Codable {
         var adult: Bool?
         var backdropPath: String?
-        var genreids: [Int]
+        var genreids: [Int]?
         var id: Int?
         var originalLanguage: OriginalLanguage?
         var originalTitle: String?
@@ -61,7 +62,6 @@ class MovieModel: NSObject {
 
     enum OriginalLanguage: String, Codable {
         case en = "en"
-        case no = "no"
+        case tl = "tl"
     }
-   
 }
