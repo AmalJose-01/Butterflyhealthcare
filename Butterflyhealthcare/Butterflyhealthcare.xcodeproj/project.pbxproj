@@ -22,6 +22,15 @@
 		E321EE1D2B41131000F5D3D3 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EE1C2B41131000F5D3D3 /* MovieViewModel.swift */; };
 		E321EE1F2B41141D00F5D3D3 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EE1E2B41141D00F5D3D3 /* MovieModel.swift */; };
 		E321EE222B41187700F5D3D3 /* CommonNetworkSwiftClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EE212B41187700F5D3D3 /* CommonNetworkSwiftClass.swift */; };
+		E321EE252B41308C00F5D3D3 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EE242B41308C00F5D3D3 /* URLConstants.swift */; };
+		E3BFD8702B414C9F00019DFC /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = E3BFD86F2B414C9F00019DFC /* SVProgressHUD */; };
+		E3BFD8732B41890D00019DFC /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFD8722B41890D00019DFC /* Observable.swift */; };
+		E3BFD8762B41B73600019DFC /* MovieListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFD8752B41B73600019DFC /* MovieListCell.swift */; };
+		E3BFD87A2B41B77200019DFC /* MovieListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3BFD8792B41B77200019DFC /* MovieListCell.xib */; };
+		E3BFD87D2B41BAC200019DFC /* Commoncornerradius_Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFD87C2B41BAC200019DFC /* Commoncornerradius_Swift.swift */; };
+		E3BFD8B32B41BB9900019DFC /* NibID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFD8982B41BB9900019DFC /* NibID.swift */; };
+		E3BFD8B72B41BD3D00019DFC /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFD8B52B41BD3D00019DFC /* UITableViewCell+Extension.swift */; };
+		E3BFD8B82B41BD3D00019DFC /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFD8B62B41BD3D00019DFC /* UITableView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +70,14 @@
 		E321EE1C2B41131000F5D3D3 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		E321EE1E2B41141D00F5D3D3 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		E321EE212B41187700F5D3D3 /* CommonNetworkSwiftClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonNetworkSwiftClass.swift; sourceTree = "<group>"; };
+		E321EE242B41308C00F5D3D3 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
+		E3BFD8722B41890D00019DFC /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		E3BFD8752B41B73600019DFC /* MovieListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListCell.swift; sourceTree = "<group>"; };
+		E3BFD8792B41B77200019DFC /* MovieListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListCell.xib; sourceTree = "<group>"; };
+		E3BFD87C2B41BAC200019DFC /* Commoncornerradius_Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commoncornerradius_Swift.swift; sourceTree = "<group>"; };
+		E3BFD8982B41BB9900019DFC /* NibID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibID.swift; sourceTree = "<group>"; };
+		E3BFD8B52B41BD3D00019DFC /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		E3BFD8B62B41BD3D00019DFC /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3BFD8702B414C9F00019DFC /* SVProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +162,10 @@
 		E321EE0F2B3FAAB300F5D3D3 /* CommonClasses */ = {
 			isa = PBXGroup;
 			children = (
+				E3BFD87E2B41BB9800019DFC /* ExtentionsAndNib */,
+				E3BFD87B2B41BAC200019DFC /* CommonRadious */,
+				E3BFD8712B41890D00019DFC /* Observable */,
+				E321EE232B41306700F5D3D3 /* Constants */,
 				E321EE202B41187700F5D3D3 /* Network */,
 				E321EE102B3FAAD000F5D3D3 /* Reachability */,
 			);
@@ -162,6 +184,7 @@
 		E321EE152B410D2100F5D3D3 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				E3BFD8742B41B71A00019DFC /* Cell */,
 				E321EE192B41102500F5D3D3 /* ViewModel */,
 				E321EE172B41100E00F5D3D3 /* Model */,
 				E321EE162B41100000F5D3D3 /* Controller */,
@@ -201,6 +224,49 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		E321EE232B41306700F5D3D3 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E321EE242B41308C00F5D3D3 /* URLConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		E3BFD8712B41890D00019DFC /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				E3BFD8722B41890D00019DFC /* Observable.swift */,
+			);
+			path = Observable;
+			sourceTree = "<group>";
+		};
+		E3BFD8742B41B71A00019DFC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E3BFD8752B41B73600019DFC /* MovieListCell.swift */,
+				E3BFD8792B41B77200019DFC /* MovieListCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E3BFD87B2B41BAC200019DFC /* CommonRadious */ = {
+			isa = PBXGroup;
+			children = (
+				E3BFD87C2B41BAC200019DFC /* Commoncornerradius_Swift.swift */,
+			);
+			path = CommonRadious;
+			sourceTree = "<group>";
+		};
+		E3BFD87E2B41BB9800019DFC /* ExtentionsAndNib */ = {
+			isa = PBXGroup;
+			children = (
+				E3BFD8B62B41BD3D00019DFC /* UITableView+Extensions.swift */,
+				E3BFD8B52B41BD3D00019DFC /* UITableViewCell+Extension.swift */,
+				E3BFD8982B41BB9900019DFC /* NibID.swift */,
+			);
+			path = ExtentionsAndNib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -217,6 +283,9 @@
 			dependencies = (
 			);
 			name = Butterflyhealthcare;
+			packageProductDependencies = (
+				E3BFD86F2B414C9F00019DFC /* SVProgressHUD */,
+			);
 			productName = Butterflyhealthcare;
 			productReference = E321EDA52B3ECA2C00F5D3D3 /* Butterflyhealthcare.app */;
 			productType = "com.apple.product-type.application";
@@ -289,6 +358,9 @@
 				Base,
 			);
 			mainGroup = E321ED9C2B3ECA2C00F5D3D3;
+			packageReferences = (
+				E3BFD86E2B414C9F00019DFC /* XCRemoteSwiftPackageReference "SVProgressHUD" */,
+			);
 			productRefGroup = E321EDA62B3ECA2C00F5D3D3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -307,6 +379,7 @@
 			files = (
 				E321EDB82B3ECA2E00F5D3D3 /* LaunchScreen.storyboard in Resources */,
 				E321EDB52B3ECA2E00F5D3D3 /* Assets.xcassets in Resources */,
+				E3BFD87A2B41B77200019DFC /* MovieListCell.xib in Resources */,
 				E321EDB02B3ECA2C00F5D3D3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,10 +405,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3BFD8732B41890D00019DFC /* Observable.swift in Sources */,
+				E3BFD8B72B41BD3D00019DFC /* UITableViewCell+Extension.swift in Sources */,
 				E321EE222B41187700F5D3D3 /* CommonNetworkSwiftClass.swift in Sources */,
+				E3BFD8B82B41BD3D00019DFC /* UITableView+Extensions.swift in Sources */,
+				E3BFD8762B41B73600019DFC /* MovieListCell.swift in Sources */,
+				E3BFD8B32B41BB9900019DFC /* NibID.swift in Sources */,
+				E321EE252B41308C00F5D3D3 /* URLConstants.swift in Sources */,
 				E321EE1B2B41114000F5D3D3 /* ViewController.swift in Sources */,
 				E321EDB32B3ECA2C00F5D3D3 /* Butterflyhealthcare.xcdatamodeld in Sources */,
 				E321EE142B3FAB5A00F5D3D3 /* Reach.swift in Sources */,
+				E3BFD87D2B41BAC200019DFC /* Commoncornerradius_Swift.swift in Sources */,
 				E321EE132B3FAB5A00F5D3D3 /* UtilReach.swift in Sources */,
 				E321EE1F2B41141D00F5D3D3 /* MovieModel.swift in Sources */,
 				E321EDA92B3ECA2C00F5D3D3 /* AppDelegate.swift in Sources */,
@@ -681,6 +761,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E3BFD86E2B414C9F00019DFC /* XCRemoteSwiftPackageReference "SVProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVProgressHUD/SVProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E3BFD86F2B414C9F00019DFC /* SVProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E3BFD86E2B414C9F00019DFC /* XCRemoteSwiftPackageReference "SVProgressHUD" */;
+			productName = SVProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		E321EDB12B3ECA2C00F5D3D3 /* Butterflyhealthcare.xcdatamodeld */ = {

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieListCell" rowHeight="77" id="E47-Ss-BP5" customClass="MovieListCell" customModule="Butterflyhealthcare" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E47-Ss-BP5" id="IQG-0Y-imf">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4aO-yk-owA">
+                        <rect key="frame" x="10" y="0.0" width="373" height="80"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AMAL JOSE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsR-9U-F1J">
+                                <rect key="frame" x="14" y="12" width="345" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="5HJ-Ht-1Ve"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="private nurse duty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNB-Pg-eSu">
+                                <rect key="frame" x="14" y="42" width="185" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oct 17th 2023" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtb-Rh-WMO">
+                                <rect key="frame" x="209" y="42" width="150" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="DkX-eb-VQR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.97959183670000005" green="0.52156862749999999" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YNB-Pg-eSu" firstAttribute="leading" secondItem="QsR-9U-F1J" secondAttribute="leading" id="5ZT-Jh-99Y"/>
+                            <constraint firstItem="QsR-9U-F1J" firstAttribute="top" secondItem="4aO-yk-owA" secondAttribute="top" constant="12" id="7V8-L3-3MM"/>
+                            <constraint firstAttribute="bottom" secondItem="YNB-Pg-eSu" secondAttribute="bottom" constant="12" id="WqX-3l-3En"/>
+                            <constraint firstAttribute="height" constant="80" id="XJW-NE-nEe"/>
+                            <constraint firstItem="YNB-Pg-eSu" firstAttribute="top" secondItem="QsR-9U-F1J" secondAttribute="bottom" constant="4" id="cpT-i4-Wrl"/>
+                            <constraint firstItem="mtb-Rh-WMO" firstAttribute="trailing" secondItem="QsR-9U-F1J" secondAttribute="trailing" id="g7i-tL-uac"/>
+                            <constraint firstItem="mtb-Rh-WMO" firstAttribute="top" secondItem="YNB-Pg-eSu" secondAttribute="top" id="gCC-MP-y9A"/>
+                            <constraint firstItem="mtb-Rh-WMO" firstAttribute="leading" secondItem="YNB-Pg-eSu" secondAttribute="trailing" constant="10" id="jXZ-8D-Dmm"/>
+                            <constraint firstItem="QsR-9U-F1J" firstAttribute="leading" secondItem="4aO-yk-owA" secondAttribute="leading" constant="14" id="nyn-15-BTQ"/>
+                            <constraint firstItem="YNB-Pg-eSu" firstAttribute="height" secondItem="QsR-9U-F1J" secondAttribute="height" id="o4C-Gj-f3o"/>
+                            <constraint firstAttribute="trailing" secondItem="QsR-9U-F1J" secondAttribute="trailing" constant="14" id="qed-LH-2ph"/>
+                            <constraint firstItem="mtb-Rh-WMO" firstAttribute="height" secondItem="QsR-9U-F1J" secondAttribute="height" id="xi8-3r-mkd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="4aO-yk-owA" secondAttribute="trailing" constant="10" id="Pdz-3d-zb2"/>
+                    <constraint firstItem="4aO-yk-owA" firstAttribute="top" secondItem="IQG-0Y-imf" secondAttribute="top" id="Qyp-34-Q6C"/>
+                    <constraint firstItem="4aO-yk-owA" firstAttribute="leading" secondItem="IQG-0Y-imf" secondAttribute="leading" constant="10" id="dZ9-y0-sod"/>
+                    <constraint firstAttribute="bottom" secondItem="4aO-yk-owA" secondAttribute="bottom" id="eS8-aC-AaI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bg_WhiteCornerView" destination="4aO-yk-owA" id="fG6-fD-nVx"/>
+                <outlet property="lbl_Date" destination="mtb-Rh-WMO" id="VNu-Aq-PpD"/>
+                <outlet property="lbl_EmployeeName" destination="QsR-9U-F1J" id="rOO-Q5-2Yf"/>
+                <outlet property="lbl_EmployeejobTitle" destination="YNB-Pg-eSu" id="QWP-jj-xCa"/>
+            </connections>
+            <point key="canvasLocation" x="-184" y="-15"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -7,54 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5022F73B-3591-40EA-B0EC-BC20F797AE3B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Butterflyhealthcare/AppDelegate.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5022F73B-3591-40EA-B0EC-BC20F797AE3B - 76505e5ff7631dde"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Butterflyhealthcare.AppDelegate.application(_: __C.UIApplication, didFinishLaunchingWithOptions: Swift.Optional&lt;Swift.Dictionary&lt;__C.UIApplicationLaunchOptionsKey, Any&gt;&gt;) -&gt; Swift.Bool"
-                  moduleName = "Butterflyhealthcare"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/AppDelegate.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "208">
-               </Location>
-               <Location
-                  uuid = "5022F73B-3591-40EA-B0EC-BC20F797AE3B - 76505e5ff7631f30"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Butterflyhealthcare.AppDelegate.application(_: __C.UIApplication, didFinishLaunchingWithOptions: Swift.Optional&lt;Swift.Dictionary&lt;__C.UIApplicationLaunchOptionsKey, Any&gt;&gt;) -&gt; Swift.Bool"
-                  moduleName = "Butterflyhealthcare"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/AppDelegate.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "56">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "53EEB3E8-1BBB-4A51-B2D8-8F423E5877CD"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -62,42 +14,10 @@
             filePath = "Butterflyhealthcare/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "callWebServiceCall()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "53EEB3E8-1BBB-4A51-B2D8-8F423E5877CD - 169975bc28c39c27"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Butterflyhealthcare.AppDelegate.callWebServiceCall() -&gt; ()"
-                  moduleName = "Butterflyhealthcare"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/AppDelegate.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "137"
-                  endingLineNumber = "137"
-                  offsetFromSymbolStart = "5796">
-               </Location>
-               <Location
-                  uuid = "53EEB3E8-1BBB-4A51-B2D8-8F423E5877CD - 169975bc28c39c27"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Butterflyhealthcare.AppDelegate.callWebServiceCall() -&gt; ()"
-                  moduleName = "Butterflyhealthcare"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/AppDelegate.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "137"
-                  endingLineNumber = "137"
-                  offsetFromSymbolStart = "5204">
-               </Location>
-            </Locations>
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -110,10 +30,10 @@
             filePath = "Butterflyhealthcare/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "callWebServiceCall()"
-            landmarkType = "7">
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -126,42 +46,10 @@
             filePath = "Butterflyhealthcare/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "callWebServiceCall()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9BB8A9CA-29CF-447C-BABA-CDAA37C96E0B - 169975bc28c3959d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Butterflyhealthcare.AppDelegate.callWebServiceCall() -&gt; ()"
-                  moduleName = "Butterflyhealthcare"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/AppDelegate.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "652">
-               </Location>
-               <Location
-                  uuid = "9BB8A9CA-29CF-447C-BABA-CDAA37C96E0B - 169975bc28c3959d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Butterflyhealthcare.AppDelegate.callWebServiceCall() -&gt; ()"
-                  moduleName = "Butterflyhealthcare"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/AppDelegate.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "328">
-               </Location>
-            </Locations>
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -178,6 +66,287 @@
             endingLineNumber = "13"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9B8AE0F7-9903-4AAC-814D-0A460A7DD021"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Butterflyhealthcare/CommonClasses/Network/CommonNetworkSwiftClass.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "callGetOrPostWebServiceHavingUnknownReturnTypeWithoutXAgency_AutoRefresh(urlString:httpMethod:inputdata:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "48787524-DBEF-42DE-93FD-C0F3D19D46DE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Butterflyhealthcare/Movie/Controller/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "setRefrentialDataViewModel(outputData:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "48787524-DBEF-42DE-93FD-C0F3D19D46DE - 6193a966658360af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Butterflyhealthcare.ViewController.setRefrentialDataViewModel(outputData: Foundation.Data) -&gt; ()"
+                  moduleName = "Butterflyhealthcare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/Movie/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "448">
+               </Location>
+               <Location
+                  uuid = "48787524-DBEF-42DE-93FD-C0F3D19D46DE - 6193a9666583616d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Butterflyhealthcare.ViewController.setRefrentialDataViewModel(outputData: Foundation.Data) -&gt; ()"
+                  moduleName = "Butterflyhealthcare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/Movie/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  uuid = "48787524-DBEF-42DE-93FD-C0F3D19D46DE - 6193a9666583616d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Butterflyhealthcare.ViewController.setRefrentialDataViewModel(outputData: Foundation.Data) -&gt; ()"
+                  moduleName = "Butterflyhealthcare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/Movie/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "264">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5E77B0FA-14DF-4482-97E6-300F07E5B0AA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Butterflyhealthcare/CommonClasses/Network/CommonNetworkSwiftClass.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "callGetOrPostWebServiceHavingUnknownReturnTypeWithoutXAgency_AutoRefresh(urlString:httpMethod:inputdata:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1BA15981-B3F4-45AC-BDA9-FABCE3B35DA9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Butterflyhealthcare/Movie/Controller/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "setRefrentialDataViewModel(outputData:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1BA15981-B3F4-45AC-BDA9-FABCE3B35DA9 - 6193a9666583604a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Butterflyhealthcare.ViewController.setRefrentialDataViewModel(outputData: Foundation.Data) -&gt; ()"
+                  moduleName = "Butterflyhealthcare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/Movie/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "668">
+               </Location>
+               <Location
+                  uuid = "1BA15981-B3F4-45AC-BDA9-FABCE3B35DA9 - de90d4aaba280e30"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in Butterflyhealthcare.ViewController.setRefrentialDataViewModel(outputData: Foundation.Data) -&gt; ()"
+                  moduleName = "Butterflyhealthcare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/Movie/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "1BA15981-B3F4-45AC-BDA9-FABCE3B35DA9 - 6193a96665836065"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Butterflyhealthcare.ViewController.setRefrentialDataViewModel(outputData: Foundation.Data) -&gt; ()"
+                  moduleName = "Butterflyhealthcare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/Movie/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "668">
+               </Location>
+               <Location
+                  uuid = "1BA15981-B3F4-45AC-BDA9-FABCE3B35DA9 - de90d4aaba280e1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in Butterflyhealthcare.ViewController.setRefrentialDataViewModel(outputData: Foundation.Data) -&gt; ()"
+                  moduleName = "Butterflyhealthcare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/Movie/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "1BA15981-B3F4-45AC-BDA9-FABCE3B35DA9 - 6193a96665836065"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Butterflyhealthcare.ViewController.setRefrentialDataViewModel(outputData: Foundation.Data) -&gt; ()"
+                  moduleName = "Butterflyhealthcare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/Movie/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "444">
+               </Location>
+               <Location
+                  uuid = "1BA15981-B3F4-45AC-BDA9-FABCE3B35DA9 - ba295e3a94b6b71c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in Butterflyhealthcare.ViewController.setRefrentialDataViewModel(outputData: Foundation.Data) -&gt; ()"
+                  moduleName = "Butterflyhealthcare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/Movie/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C2A2DB60-7E8E-4054-963A-593ED91B7617"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Butterflyhealthcare/Movie/Controller/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "setRefrentialDataViewModel(outputData:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C2A2DB60-7E8E-4054-963A-593ED91B7617 - 6193a966658360ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Butterflyhealthcare.ViewController.setRefrentialDataViewModel(outputData: Foundation.Data) -&gt; ()"
+                  moduleName = "Butterflyhealthcare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/Movie/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "448">
+               </Location>
+               <Location
+                  uuid = "C2A2DB60-7E8E-4054-963A-593ED91B7617 - f3eff704bd025f6d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Butterflyhealthcare.MovieModel.Result) -&gt; Swift.Optional&lt;Butterflyhealthcare.MovieModel.Result&gt; in Butterflyhealthcare.ViewController.setRefrentialDataViewModel(outputData: Foundation.Data) -&gt; ()"
+                  moduleName = "Butterflyhealthcare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/Movie/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "244">
+               </Location>
+               <Location
+                  uuid = "C2A2DB60-7E8E-4054-963A-593ED91B7617 - f3eff704bd025f6d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Butterflyhealthcare.MovieModel.Result) -&gt; Swift.Optional&lt;Butterflyhealthcare.MovieModel.Result&gt; in Butterflyhealthcare.ViewController.setRefrentialDataViewModel(outputData: Foundation.Data) -&gt; ()"
+                  moduleName = "Butterflyhealthcare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/Movie/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "C2A2DB60-7E8E-4054-963A-593ED91B7617 - 6193a96665836065"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Butterflyhealthcare.ViewController.setRefrentialDataViewModel(outputData: Foundation.Data) -&gt; ()"
+                  moduleName = "Butterflyhealthcare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/Movie/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "444">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

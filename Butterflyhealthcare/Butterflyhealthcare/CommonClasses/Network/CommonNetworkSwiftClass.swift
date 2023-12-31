@@ -23,38 +23,11 @@ extension CommonNetworkSwiftClass  {
     
     @objc func callGetOrPostWebServiceHavingUnknownReturnTypeWithoutXAgency_AutoRefresh ( urlString : String, httpMethod: String , inputdata: Data , completion: @escaping ((_ result: [String:AnyObject] , _ outputData: Data?) ->Void))
     {
-//        self.authState = LoginSingletonSwiftClass.shared.getOIDAuthState()
-//        let currentAccessToken: String? = self.authState?.lastTokenResponse?.accessToken
-//        self.authState?.performAction() { (accessToken, idToken, error) in
-//            if error != nil  {
-//                //self.logMessage("Error fetching fresh tokens: \(error?.localizedDescription ?? "ERROR")")
-//                var errorResponse = [String : AnyObject]()
-//                errorResponse["Error"] = (error?.localizedDescription ?? "ERROR") as AnyObject?
-//                errorResponse["ReturnStatus"] = 0 as AnyObject?
-//                errorResponse["ReturnTypeIsDictionary"] = 1 as AnyObject?
-//                completion(errorResponse,Data())
-//                return
-//            }
-//            guard let accessToken = accessToken else {
-//                //Error getting accessToken
-//                var errorResponse = [String : AnyObject]()
-//                errorResponse["Error"] = "Error getting accessToken" as AnyObject?
-//                errorResponse["ReturnStatus"] = 0 as AnyObject?
-//                errorResponse["ReturnTypeIsDictionary"] = 1 as AnyObject?
-//                completion(errorResponse,Data())
-//                return
-//            }
-//            if currentAccessToken != accessToken {
-//                //Access token was refreshed automatically
-//            } else {
-//                //Access token was fresh and not updated
-//            }
-//            LoginSingletonSwiftClass.shared.setAccessToken(token: accessToken)
-//            let agencyCode = eVeroVisitUrls.defaultAgencyCodeForICMConnection.rawValue
-//            print ("accessToken:")
-//            print (accessToken)
+        let commonUrlsAndConstants = CommonUrlsAndConstants()
+        let Token : String = commonUrlsAndConstants.getAuthorizationToken()
+ 
             let bearerString = "Bearer "
-            let authorization = bearerString + "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2ZTBiYWMzNjJjYTkwNzA0MDc1OTRhYWJjMjcwNTVhNSIsInN1YiI6IjY1OGY3NWY1ZWZjZWE5MDFmNWY5ZWVjMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.giLwC2hqd_0O9ShK8gaHSHRXXy8Pg6-hjDzLFU5nsQA"
+            let authorization = bearerString + Token
             
             guard let url = URL(string: urlString) else {
                 return
