@@ -10,13 +10,17 @@ import SVProgressHUD
 
 class ViewController: UIViewController {
     private var viewModelClass = MovieViewModel()
-    private var MFAviewModel = MovieViewModel.MovieViewModelStruct()
+    private var Obj_MovieViewModel = MovieViewModel.MovieViewModelStruct()
+    var isSearch = false
+    @IBOutlet weak var searchBar: UISearchBar!
+
 
     @IBOutlet weak var tbl_MovieList: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.title = "Movie"
         self.getMovieList()
         self.registerCells()
     }
@@ -26,17 +30,18 @@ class ViewController: UIViewController {
        
         
     }
-
-    
+        
 func getMovieList(){
   //let inputData = Data()
-    SVProgressHUD.show()
-    DispatchQueue.global(qos: .default).async {
-        // time-consuming task
-        DispatchQueue.main.async {
-            SVProgressHUD.dismiss()
-        }
-    }
+    SVProgressHUD.show(withStatus: "Loding Movie....")
+    
+
+//    DispatchQueue.global(qos: .default).async {
+//        // time-consuming task
+//        DispatchQueue.main.async {
+//            SVProgressHUD.dismiss()
+//        }
+//    }
 
   
 //  self.isFetchCompletedOnce = false
@@ -63,7 +68,7 @@ func getMovieList(){
             let MovieResponse = try JSONDecoder().decode(MovieModel.MovieResponse.self, from: outputData)
             
             
-            self.MFAviewModel.MovieList.value = MovieResponse.results?.compactMap({
+            self.Obj_MovieViewModel.MovieList.value = MovieResponse.results?.compactMap({
                 MovieViewModel.MovieResultViewModelStruct(adult: $0.adult ?? true, backdropPath: $0.backdropPath ?? "", genreids: $0.genreids , id: $0.id ?? 0, originalLanguage: $0.originalLanguage , originalTitle: $0.originalTitle ?? "", overview: $0.overview ?? "", popularity: $0.popularity ?? 0, posterPath: $0.posterPath ?? "",releaseDate: $0.releaseDate ?? "" , title: $0.title ?? "", video: $0.video ?? true, voteAverage: $0.voteAverage ?? 0, voteCount: $0.voteCount ?? 0)
             })
             
@@ -91,7 +96,11 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
         return 1;
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return  self.MFAviewModel.MovieList.value?.count ?? 0 ;
+        if(isSearch){
+            return  self.Obj_MovieViewModel.SearchMovieList.value?.count ?? 0 ;
+        }else{
+            return  self.Obj_MovieViewModel.MovieList.value?.count ?? 0 ;
+        }
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return CGFloat.leastNonzeroMagnitude
@@ -113,6 +122,15 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
             customCell.selectionStyle = UITableViewCell.SelectionStyle.none
             customCell.accessoryType = UITableViewCell.AccessoryType.none
             //          customCell.delegate=self
+            
+            var CurrentMFAobject : MovieViewModel.MovieResultViewModelStruct?
+            if(isSearch){
+                CurrentMFAobject = self.Obj_MovieViewModel.SearchMovieList.value?[indexPath.row]
+            }else{
+                CurrentMFAobject = self.Obj_MovieViewModel.MovieList.value?[indexPath.row]
+            }
+            customCell.configure(with: CurrentMFAobject, indexpath: indexPath as NSIndexPath, isfirstObject: true, isLastObject: true)
+            
             return customCell
         }else{
             let customCell: MovieListCell = tableView.dequeueReusableCell(for: indexPath)
@@ -132,5 +150,40 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
         return UITableView.automaticDimension
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+}
+
+
+extension ViewController:UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if(searchText.isEmpty){
+            isSearch = false
+        }else{
+            isSearch = true
+            
+            self.Obj_MovieViewModel.SearchMovieList.value = self.Obj_MovieViewModel.MovieList.value!.filter{ ($0.originalTitle!.localizedCaseInsensitiveContains(searchText)) }
+        
+        }
+        DispatchQueue.main.async {
+            self.tbl_MovieList.reloadData()
+        }
+        
+   }
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.searchBar.showsCancelButton = true
+        //isSearch = true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+       isSearch = false
+       searchBar.showsCancelButton = false
+       searchBar.text = ""
+       searchBar.resignFirstResponder()
+       DispatchQueue.main.async {
+            self.tbl_MovieList.reloadData()
+       }
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }

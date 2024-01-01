@@ -12,6 +12,8 @@ class MovieViewModel: NSObject {
     
     struct MovieViewModelStruct{
         var MovieList : Observable<[MovieResultViewModelStruct]> = Observable([])
+        var SearchMovieList : Observable<[MovieResultViewModelStruct]> = Observable([])
+
     }
     typealias MovieResultViewModelStruct = MovieModel.Result
     
@@ -22,7 +24,7 @@ class MovieViewModel: NSObject {
        // let urls_BaseUpi : String = eVeroVisitUrls.baseApiUrl.rawValue
         
         let commonUrlsAndConstants = CommonUrlsAndConstants()
-        let urls_BaseUpi : String = commonUrlsAndConstants.getUrl()
+        let urls_BaseUpi : String = commonUrlsAndConstants.getBaseUrl()
         
         let urls_endPoint = "/discover/movie"
         let urlFull = urls_BaseUpi + urls_endPoint
