@@ -116,13 +116,12 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView,cellForRowAt indexPath: IndexPath)-> UITableViewCell {
-        if (indexPath.section == 0) // Profile Header
+        if (indexPath.section == 0)
         {
             let customCell: MovieListCell = tableView.dequeueReusableCell(for: indexPath)
             customCell.selectionStyle = UITableViewCell.SelectionStyle.none
             customCell.accessoryType = UITableViewCell.AccessoryType.none
             //          customCell.delegate=self
-            
             var CurrentMFAobject : MovieViewModel.MovieResultViewModelStruct?
             if(isSearch){
                 CurrentMFAobject = self.Obj_MovieViewModel.SearchMovieList.value?[indexPath.row]
@@ -134,7 +133,6 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
             return customCell
         }else{
             let customCell: MovieListCell = tableView.dequeueReusableCell(for: indexPath)
-//            customCell.configure(with: "START", indexpath: indexPath as NSIndexPath , keyboardType: .default, fromClass: "", isViewMode: 0)
             customCell.selectionStyle = UITableViewCell.SelectionStyle.none
             customCell.accessoryType = UITableViewCell.AccessoryType.none
 //            customCell.delegate=self
@@ -150,9 +148,31 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
         return UITableView.automaticDimension
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var CurrentMFAobject : MovieViewModel.MovieResultViewModelStruct?
+        if(isSearch){
+            CurrentMFAobject = self.Obj_MovieViewModel.SearchMovieList.value?[indexPath.row]
+        }else{
+            CurrentMFAobject = self.Obj_MovieViewModel.MovieList.value?[indexPath.row]
+        }
+
+        self.clickRedirectAction(MovieResult: CurrentMFAobject)
     }
 }
 
+
+extension ViewController{
+  func clickRedirectAction(MovieResult:MovieViewModel.MovieResultViewModelStruct?) {
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      let manageSubscriptionViewController = storyboard.instantiateViewController(withIdentifier: "MovieDetailViewControllerID")
+      as! MovieDetailViewController
+      manageSubscriptionViewController.CurrentMFAobject = MovieResult
+      let transition = CATransition()
+      transition.duration = 0.3
+      transition.type = .fade
+      self.navigationController?.view.layer.add(transition, forKey: kCATransition)
+      self.navigationController?.pushViewController(manageSubscriptionViewController, animated: false)
+  }
+}
 
 extension ViewController:UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -187,3 +207,4 @@ extension ViewController:UISearchBarDelegate{
         searchBar.resignFirstResponder()
     }
 }
+

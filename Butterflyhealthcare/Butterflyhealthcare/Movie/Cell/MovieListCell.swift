@@ -26,8 +26,7 @@ class MovieListCell: UITableViewCell {
         DispatchQueue.main.async {
             self.viewSetObjectLayers()
         }
-        
-        
+        self.setFontForView()
     }
     func viewSetObjectLayers(){
         let commoncornerradius_Swift = Commoncornerradius_Swift()
@@ -40,7 +39,6 @@ class MovieListCell: UITableViewCell {
         self.lbl_MovieTitle.font=commonFontClass.MulishBoldForProfileName_Small()
         self.lbl_ReleaseDate.font=commonFontClass.MulishRegularForProfileDate()
         self.lbl_overview.font=commonFontClass.MulishItalicForLabel()
-
     }
     
     
@@ -57,8 +55,6 @@ class MovieListCell: UITableViewCell {
         guard let url = URL(string: urlFull) else {
             return
         }
-        
-
         
         ImageLoader.downloaded(from: url)
         

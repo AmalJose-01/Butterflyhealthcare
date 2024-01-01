@@ -100,6 +100,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Nx8-qR-UcK">
                                 <rect key="frame" x="4" y="163" width="385" height="602"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="K7f-1K-kCV" id="srq-iD-5oy"/>
                                     <outlet property="delegate" destination="K7f-1K-kCV" id="1aD-Em-jhT"/>
@@ -135,17 +136,22 @@
             </objects>
             <point key="canvasLocation" x="866" y="-494"/>
         </scene>
-        <!--View Controller-->
+        <!--Movie Detail View Controller-->
         <scene sceneID="I6T-vq-QeM">
             <objects>
-                <viewController id="Lgv-VK-VGJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieDetailViewControllerID" id="Lgv-VK-VGJ" customClass="MovieDetailViewController" customModule="Butterflyhealthcare" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2On-kV-hvq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eEI-Yo-zvR">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eEI-Yo-zvR">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Lgv-VK-VGJ" id="hfH-PR-o8s"/>
+                                    <outlet property="delegate" destination="Lgv-VK-VGJ" id="ehy-hV-sAj"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yXA-Lg-PYP"/>
@@ -157,6 +163,9 @@
                             <constraint firstItem="eEI-Yo-zvR" firstAttribute="leading" secondItem="yXA-Lg-PYP" secondAttribute="leading" id="wVz-3m-iPM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tbl_MovieList" destination="eEI-Yo-zvR" id="gOP-Jl-9hY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xQJ-jc-1km" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

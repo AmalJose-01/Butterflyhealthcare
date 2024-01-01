@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E3012EB82B42B38C00788238 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3012EB72B42B38C00788238 /* MovieDetailViewController.swift */; };
+		E3012EBA2B42BB3D00788238 /* MovieDetailBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3012EB92B42BB3D00788238 /* MovieDetailBanner.swift */; };
+		E3012EBC2B42BB4800788238 /* MovieDetailBanner.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3012EBB2B42BB4800788238 /* MovieDetailBanner.xib */; };
+		E3012EBE2B42C53F00788238 /* MoviedetailOverviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3012EBD2B42C53F00788238 /* MoviedetailOverviewCell.xib */; };
+		E3012EC02B42C55200788238 /* MoviedetailOverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3012EBF2B42C55200788238 /* MoviedetailOverviewCell.swift */; };
 		E321EDA92B3ECA2C00F5D3D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EDA82B3ECA2C00F5D3D3 /* AppDelegate.swift */; };
 		E321EDAB2B3ECA2C00F5D3D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EDAA2B3ECA2C00F5D3D3 /* SceneDelegate.swift */; };
 		E321EDB02B3ECA2C00F5D3D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E321EDAE2B3ECA2C00F5D3D3 /* Main.storyboard */; };
@@ -77,6 +81,10 @@
 
 /* Begin PBXFileReference section */
 		E3012EB72B42B38C00788238 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		E3012EB92B42BB3D00788238 /* MovieDetailBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailBanner.swift; sourceTree = "<group>"; };
+		E3012EBB2B42BB4800788238 /* MovieDetailBanner.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailBanner.xib; sourceTree = "<group>"; };
+		E3012EBD2B42C53F00788238 /* MoviedetailOverviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviedetailOverviewCell.xib; sourceTree = "<group>"; };
+		E3012EBF2B42C55200788238 /* MoviedetailOverviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviedetailOverviewCell.swift; sourceTree = "<group>"; };
 		E321EDA52B3ECA2C00F5D3D3 /* Butterflyhealthcare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Butterflyhealthcare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E321EDA82B3ECA2C00F5D3D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E321EDAA2B3ECA2C00F5D3D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -357,8 +365,12 @@
 		E3BFD8742B41B71A00019DFC /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				E3012EB92B42BB3D00788238 /* MovieDetailBanner.swift */,
+				E3012EBB2B42BB4800788238 /* MovieDetailBanner.xib */,
 				E3BFD8752B41B73600019DFC /* MovieListCell.swift */,
 				E3BFD8792B41B77200019DFC /* MovieListCell.xib */,
+				E3012EBD2B42C53F00788238 /* MoviedetailOverviewCell.xib */,
+				E3012EBF2B42C55200788238 /* MoviedetailOverviewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -504,6 +516,7 @@
 				E321EDB82B3ECA2E00F5D3D3 /* LaunchScreen.storyboard in Resources */,
 				E3518F442B423897003C8614 /* Mulish-SemiBold.ttf in Resources */,
 				E3518F422B423897003C8614 /* Mulish-Medium.ttf in Resources */,
+				E3012EBE2B42C53F00788238 /* MoviedetailOverviewCell.xib in Resources */,
 				E3518F3D2B423897003C8614 /* Mulish-ExtraLightItalic.ttf in Resources */,
 				E3518F3E2B423897003C8614 /* Mulish-Bold.ttf in Resources */,
 				E3518F372B423897003C8614 /* Mulish-ExtraBoldItalic.ttf in Resources */,
@@ -515,6 +528,7 @@
 				E3518F412B423897003C8614 /* Mulish-ExtraLight.ttf in Resources */,
 				E3BFD87A2B41B77200019DFC /* MovieListCell.xib in Resources */,
 				E321EDB02B3ECA2C00F5D3D3 /* Main.storyboard in Resources */,
+				E3012EBC2B42BB4800788238 /* MovieDetailBanner.xib in Resources */,
 				E3518F392B423897003C8614 /* Mulish-Regular.ttf in Resources */,
 				E3518F452B423897003C8614 /* Mulish-BoldItalic.ttf in Resources */,
 			);
@@ -541,6 +555,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3012EC02B42C55200788238 /* MoviedetailOverviewCell.swift in Sources */,
 				E3BFD8732B41890D00019DFC /* Observable.swift in Sources */,
 				E3BFD8B72B41BD3D00019DFC /* UITableViewCell+Extension.swift in Sources */,
 				E321EE222B41187700F5D3D3 /* CommonNetworkSwiftClass.swift in Sources */,
@@ -553,6 +568,7 @@
 				E3518F512B424EEC003C8614 /* ImageLoader.swift in Sources */,
 				E321EDB32B3ECA2C00F5D3D3 /* Butterflyhealthcare.xcdatamodeld in Sources */,
 				E321EE142B3FAB5A00F5D3D3 /* Reach.swift in Sources */,
+				E3012EBA2B42BB3D00788238 /* MovieDetailBanner.swift in Sources */,
 				E3BFD87D2B41BAC200019DFC /* Commoncornerradius_Swift.swift in Sources */,
 				E321EE132B3FAB5A00F5D3D3 /* UtilReach.swift in Sources */,
 				E321EE1F2B41141D00F5D3D3 /* MovieModel.swift in Sources */,

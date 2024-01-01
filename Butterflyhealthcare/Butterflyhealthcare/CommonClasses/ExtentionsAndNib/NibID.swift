@@ -8,6 +8,10 @@ enum NibID: String, CaseIterable {
     
     // MARK:  eMar Facility List
     case MovieListCell = "MovieListCell"
+    case MovieDetailBanner = "MovieDetailBanner"
+    case MoviedetailOverviewCell = "MoviedetailOverviewCell"
+
+
     
    
     

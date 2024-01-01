@@ -50,7 +50,7 @@ public class CommonFontClass: NSObject {
     }
     
    
-    public func MulishItalicForLabel() -> UIFont {
+    public func MulishItalicForLabelHeader() -> UIFont {
         if UIDevice.isPadDevice {
             let appFont:UIFont = UIFont(name: "Mulish-Italic", size: 14)!
             return appFont
@@ -58,8 +58,22 @@ public class CommonFontClass: NSObject {
             let appFont:UIFont = UIFont(name: "Mulish-Italic", size: 12)!
             return appFont
         }
+        
+        
     }
     
+    
+     public func MulishItalicForLabel() -> UIFont {
+         if UIDevice.isPadDevice {
+             let appFont:UIFont = UIFont(name: "Mulish-Italic", size: 16)!
+             return appFont
+         }else{
+             let appFont:UIFont = UIFont(name: "Mulish-Italic", size: 14)!
+             return appFont
+         }
+         
+         
+     }
     
 }
 
