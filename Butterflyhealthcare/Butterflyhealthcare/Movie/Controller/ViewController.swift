@@ -14,7 +14,15 @@ class ViewController: UIViewController {
     var isSearch = false
     @IBOutlet weak var searchBar: UISearchBar!
 
+    var isDataLoading:Bool=false
+    var activityIndicator=UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
 
+    
+    var pageNo:Int=1
+    var limit:Int=20
+    var offset:Int=0
+    var connectionCount:Int=0
+    
     @IBOutlet weak var tbl_MovieList: UITableView!
     
     override func viewDidLoad() {
@@ -208,3 +216,77 @@ extension ViewController:UISearchBarDelegate{
     }
 }
 
+
+extension ViewController:UIScrollViewDelegate{
+    
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        
+        print("scrollViewWillBeginDragging")
+        //  isDataLoading = false
+    }
+    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+        print("scrollViewWillBeginDecelerating")
+    }
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        print("scrollViewDidEndScrollingAnimation")
+    }
+    
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        print("scrollViewDidEndDecelerating")
+    }
+    //Pagination
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        
+        print("scrollViewDidEndDragging")
+        if ((tbl_MovieList.contentOffset.y + tbl_MovieList.frame.size.height) >= tbl_MovieList.contentSize.height)
+        {
+            if !isDataLoading{
+                DispatchQueue.main.async {
+                    self.activityIndicator.startAnimating()
+                }
+                //isDataLoading = true
+                var dataCount : Int
+                if(isSearch){
+                    dataCount =  self.Obj_MovieViewModel.SearchMovieList.value?.count ?? 0
+                }else{
+                    dataCount =   self.Obj_MovieViewModel.MovieList.value?.count ?? 0
+                }
+                
+                
+                if dataCount > 20 {
+                    self.offset=tempArr.count
+                    self.limit=self.offset+20
+                    
+                    
+                    addContactsList(offset: self.offset, limit: self.limit)
+                    
+                }
+                
+            }
+            
+            
+        }
+        
+        
+    }
+    
+    func addContactsList(offset:Int,limit:Int){
+        if self.results.count > limit{
+            
+            for i in offset..<limit{
+                tempArr.append(results[i])
+            }
+            self.tableView.reloadData()
+        }else{
+            for i in offset..<self.results.count{
+                tempArr.append(results[i])
+            }
+            self.tableView.reloadData()
+            self.tableView.tableFooterView?.isHidden=true
+            self.isDataLoading = true
+            
+        }
+    }
+}
