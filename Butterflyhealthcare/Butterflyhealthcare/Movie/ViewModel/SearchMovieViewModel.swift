@@ -1,5 +1,5 @@
 //
-//  MovieViewModel.swift
+//  SearchMovieModel.swift
 //  Butterflyhealthcare
 //
 //  Created by Gerald George on 31/12/2023.
@@ -7,26 +7,25 @@
 
 import Foundation
 
-class MovieViewModel: NSObject {
+class SearchMovieViewModel: NSObject {
     
     
-    struct MovieViewModelStruct{
-        var MovieList : Observable<[MovieResultViewModelStruct]> = Observable([])
-        var SerMovieList : Observable<[MovieResultViewModelStruct]> = Observable([])
+    struct SearchMovieViewModelStruct{
+        var TempMovieList : Observable<[SearchMovieResultViewModelStruct]> = Observable([])
+        var SearchMovieList : Observable<[SearchMovieResultViewModelStruct]> = Observable([])
 
     }
-    typealias MovieResultViewModelStruct = MovieModel.Result
+    typealias SearchMovieResultViewModelStruct = SearchMovieModel.results
     
     
-    
-    func getMovieList (completion: @escaping ((_ result: [String:AnyObject]? , _ outputData: Data?) ->Void))
+    func searchMovieList (query:String ,page:Int  ,completion: @escaping ((_ result: [String:AnyObject]? , _ outputData: Data?) ->Void))
     {
        // let urls_BaseUpi : String = eVeroVisitUrls.baseApiUrl.rawValue
         
         let commonUrlsAndConstants = CommonUrlsAndConstants()
         let urls_BaseUpi : String = commonUrlsAndConstants.getBaseUrl()
         
-        let urls_endPoint = "/discover/movie"
+        let urls_endPoint = "/search/movie?query=" + query + "&page=" +  String(page)
         let urlFull = urls_BaseUpi + urls_endPoint
         let httpMethod = "GET"
         let inputData = Data()
@@ -36,9 +35,6 @@ class MovieViewModel: NSObject {
             return completion(resultValue,outputDataValue)
         }
     }
-    
-    
-    
     
     
     

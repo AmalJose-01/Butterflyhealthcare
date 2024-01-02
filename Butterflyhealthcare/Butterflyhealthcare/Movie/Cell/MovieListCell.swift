@@ -43,6 +43,28 @@ class MovieListCell: UITableViewCell {
     
     
     
+    
+    public func configure_Search(with MovieResult:SearchMovieViewModel.SearchMovieResultViewModelStruct? , indexpath:NSIndexPath, isfirstObject:Bool,isLastObject:Bool){
+        self.setFontForView()
+        lbl_MovieTitle.text = MovieResult?.originalTitle
+        lbl_ReleaseDate.text = MovieResult?.releaseDate
+        lbl_overview.text = MovieResult?.overview
+        let commonUrlsAndConstants = CommonUrlsAndConstants()
+        let urls_BaseUpi : String = commonUrlsAndConstants.getPosterImageBaseUrl()
+        let urls_endPoint = MovieResult?.posterPath ?? "/tlcuhdNMKNGEVpGqBZrAaOOf1A6.jpg"
+        let urlFull = urls_BaseUpi + urls_endPoint
+        guard let url = URL(string: urlFull) else {
+            return
+        }
+        
+        ImageLoader.downloaded(from: url)
+        
+        self.setRating(vote_average: MovieResult?.voteAverage ?? 0)
+    }
+    
+    
+    
+    
     public func configure(with MovieResult:MovieViewModel.MovieResultViewModelStruct? , indexpath:NSIndexPath, isfirstObject:Bool,isLastObject:Bool){
         self.setFontForView()
         lbl_MovieTitle.text = MovieResult?.originalTitle

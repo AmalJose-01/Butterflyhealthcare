@@ -60,6 +60,10 @@
 		E3BFD8B32B41BB9900019DFC /* NibID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFD8982B41BB9900019DFC /* NibID.swift */; };
 		E3BFD8B72B41BD3D00019DFC /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFD8B52B41BD3D00019DFC /* UITableViewCell+Extension.swift */; };
 		E3BFD8B82B41BD3D00019DFC /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFD8B62B41BD3D00019DFC /* UITableView+Extensions.swift */; };
+		E3DBC4222B438B5F008559DE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DBC4212B438B5F008559DE /* SearchViewController.swift */; };
+		E3DBC4262B438D50008559DE /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E3DBC4242B438D50008559DE /* UIScrollView+EmptyDataSet.m */; };
+		E3DBC4282B4393E1008559DE /* SearchMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DBC4272B4393E1008559DE /* SearchMovieViewModel.swift */; };
+		E3DBC42A2B4393EB008559DE /* SearchMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DBC4292B4393EB008559DE /* SearchMovieModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +140,11 @@
 		E3BFD8982B41BB9900019DFC /* NibID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibID.swift; sourceTree = "<group>"; };
 		E3BFD8B52B41BD3D00019DFC /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		E3BFD8B62B41BD3D00019DFC /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		E3DBC4212B438B5F008559DE /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		E3DBC4242B438D50008559DE /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		E3DBC4252B438D50008559DE /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
+		E3DBC4272B4393E1008559DE /* SearchMovieViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMovieViewModel.swift; sourceTree = "<group>"; };
+		E3DBC4292B4393EB008559DE /* SearchMovieModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMovieModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +229,7 @@
 		E321EE0F2B3FAAB300F5D3D3 /* CommonClasses */ = {
 			isa = PBXGroup;
 			children = (
+				E3DBC4232B438D50008559DE /* EmptyDataSet */,
 				E3518F4F2B424EDE003C8614 /* Bindings */,
 				E3518F4A2B4238AD003C8614 /* CommonFont_Swift */,
 				E3518F202B423897003C8614 /* Mulish_Font */,
@@ -259,6 +269,7 @@
 			children = (
 				E321EE1A2B41114000F5D3D3 /* ViewController.swift */,
 				E3012EB72B42B38C00788238 /* MovieDetailViewController.swift */,
+				E3DBC4212B438B5F008559DE /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -267,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				E321EE1E2B41141D00F5D3D3 /* MovieModel.swift */,
+				E3DBC4292B4393EB008559DE /* SearchMovieModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				E321EE1C2B41131000F5D3D3 /* MovieViewModel.swift */,
+				E3DBC4272B4393E1008559DE /* SearchMovieViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -392,6 +405,15 @@
 				E3BFD8982B41BB9900019DFC /* NibID.swift */,
 			);
 			path = ExtentionsAndNib;
+			sourceTree = "<group>";
+		};
+		E3DBC4232B438D50008559DE /* EmptyDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				E3DBC4242B438D50008559DE /* UIScrollView+EmptyDataSet.m */,
+				E3DBC4252B438D50008559DE /* UIScrollView+EmptyDataSet.h */,
+			);
+			path = EmptyDataSet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -564,10 +586,12 @@
 				E3BFD8B32B41BB9900019DFC /* NibID.swift in Sources */,
 				E321EE252B41308C00F5D3D3 /* URLConstants.swift in Sources */,
 				E321EE1B2B41114000F5D3D3 /* ViewController.swift in Sources */,
+				E3DBC4282B4393E1008559DE /* SearchMovieViewModel.swift in Sources */,
 				E3518F4C2B4238AD003C8614 /* CommonFontClass.swift in Sources */,
 				E3518F512B424EEC003C8614 /* ImageLoader.swift in Sources */,
 				E321EDB32B3ECA2C00F5D3D3 /* Butterflyhealthcare.xcdatamodeld in Sources */,
 				E321EE142B3FAB5A00F5D3D3 /* Reach.swift in Sources */,
+				E3DBC4222B438B5F008559DE /* SearchViewController.swift in Sources */,
 				E3012EBA2B42BB3D00788238 /* MovieDetailBanner.swift in Sources */,
 				E3BFD87D2B41BAC200019DFC /* Commoncornerradius_Swift.swift in Sources */,
 				E321EE132B3FAB5A00F5D3D3 /* UtilReach.swift in Sources */,
@@ -575,7 +599,9 @@
 				E321EDA92B3ECA2C00F5D3D3 /* AppDelegate.swift in Sources */,
 				E3012EB82B42B38C00788238 /* MovieDetailViewController.swift in Sources */,
 				E3518F4E2B42430F003C8614 /* UIImage+Extensions.swift in Sources */,
+				E3DBC42A2B4393EB008559DE /* SearchMovieModel.swift in Sources */,
 				E321EE1D2B41131000F5D3D3 /* MovieViewModel.swift in Sources */,
+				E3DBC4262B438D50008559DE /* UIScrollView+EmptyDataSet.m in Sources */,
 				E321EDAB2B3ECA2C00F5D3D3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

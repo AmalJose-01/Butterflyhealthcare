@@ -7,12 +7,11 @@
 
 import Foundation
 
-class MovieModel: NSObject {
-    
-    // MARK: - Welcome
-    struct MovieResponse: Codable {
+class SearchMovieModel: NSObject {
+
+    struct SearchMovieResponse: Codable {
         var page: Int?
-        var results: [Result]?
+        var results: [results]?
         var totalPages: Int?
         var totalResults: Int?
 
@@ -23,15 +22,16 @@ class MovieModel: NSObject {
             case totalResults = "total_results"
         }
     }
+    
 
 
     // MARK: - Result
-    struct Result: Codable {
+    struct results: Codable {
         var adult: Bool?
         var backdropPath: String?
         var genreids: [Int]?
         var id: Int?
-        var originalLanguage: OriginalLanguage?
+        var originalLanguage: String?
         var originalTitle: String?
         var overview: String?
         var popularity: Double?
@@ -59,10 +59,5 @@ class MovieModel: NSObject {
             case voteCount = "vote_count"
         }
     }
-
-    
-    enum OriginalLanguage: String, Codable {
-        case en = "en"
-        case ja = "ja"
-    }
+   
 }
