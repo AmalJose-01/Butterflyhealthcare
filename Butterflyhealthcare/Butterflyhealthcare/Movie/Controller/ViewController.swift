@@ -29,7 +29,8 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
     var limit:Int=20
     var offset:Int=0
     var connectionCount:Int=0
-    
+    let refreshControl = UIRefreshControl()
+
     @IBOutlet weak var tbl_MovieList: UITableView!
     
     override func viewDidLoad() {
@@ -37,29 +38,17 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
         // Do any additional setup after loading the view.
         self.title = "Movie"
         
-        
-        let utilReach = UtilReach()
-        if (utilReach.connectionStatus()) {
-             isOfflineMode = false
-            searchBarHeightConstraint.constant = 58
-            searchBar.isHidden = false
-            self.getMovieList()
-        }else{
-             isOfflineMode = true
-            searchBarHeightConstraint.constant = 0
-            searchBar.isHidden = true
-            context = appDelegate.persistentContainer.viewContext
-            fetchedResultsController = NSFetchedResultsController(fetchRequest: viewModelClass.allEmployeesFetchRequest(), managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-                fetchedResultsController?.delegate = self
-            do {
-                try fetchedResultsController?.performFetch()
-            } catch {
-//                print("Storing data Failed")
-            }
-        }
-        
-       
         self.registerCells()
+        
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+          refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+          tbl_MovieList.addSubview(refreshControl)
+        self.getViewData()
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
     }
     
     func registerCells(){
@@ -89,8 +78,10 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
     }
     
     func setMovieListDataViewModel(outputData:Data){
-        
+        refreshControl.endRefreshing()
+
         do {
+            
             let MovieResponse = try JSONDecoder().decode(MovieModel.MovieResponse.self, from: outputData)
             
             
@@ -115,27 +106,44 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
     
     
     
-    
-    
-    func fetchData()
-        {
-            print("Fetching Data..")
-            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Movie")
-            request.returnsObjectsAsFaults = false
-            do {
-                let result = try context.fetch(request)
-//                fetchedResultsController  = result
-            } catch {
-                print("Fetching data Failed")
-            }
-        }
-    
-    
-    
-    
-    
 }
 
+extension ViewController {
+    func getViewData() {
+        let utilReach = UtilReach()
+        if (utilReach.connectionStatus()) {
+             isOfflineMode = false
+            searchBarHeightConstraint.constant = 58
+            searchBar.isHidden = false
+            self.getMovieList()
+        }else{
+             isOfflineMode = true
+            searchBarHeightConstraint.constant = 0
+            searchBar.isHidden = true
+            context = appDelegate.persistentContainer.viewContext
+            fetchedResultsController = NSFetchedResultsController(fetchRequest: viewModelClass.allEmployeesFetchRequest(), managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+                fetchedResultsController?.delegate = self
+            do {
+                try fetchedResultsController?.performFetch()
+                refreshControl.endRefreshing()
+                DispatchQueue.main.async {
+                    self.tbl_MovieList.reloadData()
+                }
+            } catch {
+//                print("Storing data Failed")
+            }
+        }
+    }
+    
+    @objc func refresh(_ sender: AnyObject) {
+         self.getViewData()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChangeContentWith diff: CollectionDifference<NSManagedObjectID>){
+        
+    }
+    
+}
 
 // MARK: TABLEVIEW DELEGATES STARTS
 extension ViewController:UITableViewDataSource,UITableViewDelegate{
