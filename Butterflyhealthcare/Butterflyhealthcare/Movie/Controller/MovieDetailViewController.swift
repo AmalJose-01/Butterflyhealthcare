@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 
 class MovieDetailViewController: UIViewController {
@@ -17,6 +18,8 @@ class MovieDetailViewController: UIViewController {
 
 
     var fromClass : String = ""
+    var isOfflineMode : Bool?
+var MovieResult: Movie!
 
     @IBOutlet weak var tbl_MovieList: UITableView!
     
@@ -65,8 +68,13 @@ extension MovieDetailViewController:UITableViewDataSource,UITableViewDelegate{
             customCell.selectionStyle = UITableViewCell.SelectionStyle.none
             customCell.accessoryType = UITableViewCell.AccessoryType.none
             //          customCell.delegate=self
-            if(fromClass == "eVeroVisit.ViewController"){
-                customCell.configure(with: CurrentMFAobject, indexpath: indexPath as NSIndexPath, isfirstObject: true, isLastObject: true)
+            if(fromClass == "Butterflyhealthcare.ViewController"){
+                if isOfflineMode ?? false{
+                    customCell.configureOffline(with: MovieResult, indexpath: indexPath as NSIndexPath, isfirstObject: true, isLastObject: true)
+
+                }else{
+                    customCell.configure(with: CurrentMFAobject, indexpath: indexPath as NSIndexPath, isfirstObject: true, isLastObject: true)
+                }
 
             }else{
                 customCell.configureSearch(with: SearchCurrentMFAobject, indexpath: indexPath as NSIndexPath, isfirstObject: true, isLastObject: true)
@@ -80,8 +88,13 @@ extension MovieDetailViewController:UITableViewDataSource,UITableViewDelegate{
 //            customCell.delegate=self
             
 
-            if(fromClass == "eVeroVisit.ViewController"){
-                customCell.configure(with: CurrentMFAobject, indexpath: indexPath as NSIndexPath, isfirstObject: true, isLastObject: true)
+            if(fromClass == "Butterflyhealthcare.ViewController"){
+                if isOfflineMode ?? false{
+                    customCell.configureOffline(with: MovieResult, indexpath: indexPath as NSIndexPath, isfirstObject: true, isLastObject: true)
+
+                }else{
+                    customCell.configure(with: CurrentMFAobject, indexpath: indexPath as NSIndexPath, isfirstObject: true, isLastObject: true)
+                }
             }else{
                 customCell.configureSearch(with: SearchCurrentMFAobject, indexpath: indexPath as NSIndexPath, isfirstObject: true, isLastObject: true)
             }

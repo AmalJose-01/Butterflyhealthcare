@@ -215,14 +215,27 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
         return UITableView.automaticDimension
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var CurrentMFAobject : MovieViewModel.MovieResultViewModelStruct?
-        if(isSearch){
-            CurrentMFAobject = self.Obj_MovieViewModel.SerMovieList.value?[indexPath.row]
-        }else{
-            CurrentMFAobject = self.Obj_MovieViewModel.MovieList.value?[indexPath.row]
-        }
+       
         
-        self.clickRedirectAction(MovieResult: CurrentMFAobject)
+
+        if (isOfflineMode){
+            
+            if let cellContact = fetchedResultsController?.object(at: indexPath) as? Movie {
+                self.clickRedirectActionOffline(MovieResult: cellContact)
+
+            }
+            
+        }else{
+            var CurrentMFAobject : MovieViewModel.MovieResultViewModelStruct?
+            if(isSearch){
+                CurrentMFAobject = self.Obj_MovieViewModel.SerMovieList.value?[indexPath.row]
+            }else{
+                CurrentMFAobject = self.Obj_MovieViewModel.MovieList.value?[indexPath.row]
+            }
+            self.clickRedirectAction(MovieResult: CurrentMFAobject)
+        }
+
+
     }
 }
 
@@ -232,7 +245,25 @@ extension ViewController{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let manageSubscriptionViewController = storyboard.instantiateViewController(withIdentifier: "MovieDetailViewControllerID")
         as! MovieDetailViewController
+        
         manageSubscriptionViewController.CurrentMFAobject = MovieResult
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.type = .fade
+        manageSubscriptionViewController.fromClass = NSStringFromClass(type(of: self))
+        manageSubscriptionViewController.isOfflineMode = false
+        self.navigationController?.view.layer.add(transition, forKey: kCATransition)
+        self.navigationController?.pushViewController(manageSubscriptionViewController, animated: false)
+    }
+    
+    
+    func clickRedirectActionOffline(MovieResult: Movie) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let manageSubscriptionViewController = storyboard.instantiateViewController(withIdentifier: "MovieDetailViewControllerID")
+        as! MovieDetailViewController
+        manageSubscriptionViewController.isOfflineMode = true
+
+        manageSubscriptionViewController.MovieResult = MovieResult
         let transition = CATransition()
         transition.duration = 0.3
         transition.type = .fade

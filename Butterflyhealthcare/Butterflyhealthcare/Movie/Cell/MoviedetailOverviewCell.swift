@@ -33,6 +33,12 @@ class MoviedetailOverviewCell: UITableViewCell {
         
     }
     
+    public func configureOffline(with MovieResult:Movie , indexpath:NSIndexPath, isfirstObject:Bool,isLastObject:Bool){
+        lbl_OverViewValue.text = MovieResult.overview
+        
+        
+    }
+    
     public func configureSearch(with MovieResult:SearchMovieViewModel.SearchMovieResultViewModelStruct? , indexpath:NSIndexPath, isfirstObject:Bool,isLastObject:Bool){
         lbl_OverViewValue.text = MovieResult?.overview
         

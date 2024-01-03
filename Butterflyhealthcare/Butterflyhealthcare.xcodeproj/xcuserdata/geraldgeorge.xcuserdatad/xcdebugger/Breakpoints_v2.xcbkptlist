@@ -209,6 +209,38 @@
             endingLineNumber = "262"
             landmarkName = "scrollViewDidEndDragging(_:willDecelerate:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "85D31EAD-A792-4E84-9D1A-271318264E07 - 3c0f7dd05f71901e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Butterflyhealthcare.SearchViewController.scrollViewDidEndDragging(_: __C.UIScrollView, willDecelerate: Swift.Bool) -&gt; ()"
+                  moduleName = "Butterflyhealthcare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/Movie/Controller/SearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "262"
+                  endingLineNumber = "262"
+                  offsetFromSymbolStart = "2780">
+               </Location>
+               <Location
+                  uuid = "85D31EAD-A792-4E84-9D1A-271318264E07 - 3c0f7dd05f71901e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Butterflyhealthcare.SearchViewController.scrollViewDidEndDragging(_: __C.UIScrollView, willDecelerate: Swift.Bool) -&gt; ()"
+                  moduleName = "Butterflyhealthcare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/Movie/Controller/SearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "262"
+                  endingLineNumber = "262"
+                  offsetFromSymbolStart = "2132">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -474,10 +506,42 @@
             filePath = "Butterflyhealthcare/Movie/Cell/MoviedetailOverviewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "configureSearch(with:indexpath:isfirstObject:isLastObject:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5A7B6A34-A55B-4E03-A175-4EF60F4646C5 - eca17cf289da63d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Butterflyhealthcare.MoviedetailOverviewCell.configureSearch(with: Swift.Optional&lt;Butterflyhealthcare.SearchMovieModel.results&gt;, indexpath: __C.NSIndexPath, isfirstObject: Swift.Bool, isLastObject: Swift.Bool) -&gt; ()"
+                  moduleName = "Butterflyhealthcare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/Movie/Cell/MoviedetailOverviewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "5A7B6A34-A55B-4E03-A175-4EF60F4646C5 - eca17cf289da631e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Butterflyhealthcare.MoviedetailOverviewCell.configureSearch(with: Swift.Optional&lt;Butterflyhealthcare.SearchMovieModel.results&gt;, indexpath: __C.NSIndexPath, isfirstObject: Swift.Bool, isLastObject: Swift.Bool) -&gt; ()"
+                  moduleName = "Butterflyhealthcare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/Movie/Cell/MoviedetailOverviewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "124">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -490,10 +554,90 @@
             filePath = "Butterflyhealthcare/Movie/Controller/MovieDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "35C757DC-5C35-40DA-B02C-66F0F2A77948 - a96281e86d4e0d43"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Butterflyhealthcare.MovieDetailViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Butterflyhealthcare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/Movie/Controller/MovieDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "972">
+               </Location>
+               <Location
+                  uuid = "35C757DC-5C35-40DA-B02C-66F0F2A77948 - a96281e86d4e0c5b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Butterflyhealthcare.MovieDetailViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Butterflyhealthcare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/Movie/Controller/MovieDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "1400">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA0734A1-5BB4-4D7A-8296-F8E2E92CDEA2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Butterflyhealthcare/Movie/Controller/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BA0734A1-5BB4-4D7A-8296-F8E2E92CDEA2 - 746d2a10cf43a30"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Butterflyhealthcare.ViewController.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Butterflyhealthcare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/Movie/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "221"
+                  endingLineNumber = "221"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "BA0734A1-5BB4-4D7A-8296-F8E2E92CDEA2 - 746d2a10cf43a30"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Butterflyhealthcare.ViewController.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Butterflyhealthcare"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geraldgeorge/Desktop/Butterflyhealthcare/Butterflyhealthcare/Butterflyhealthcare/Movie/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "221"
+                  endingLineNumber = "221"
+                  offsetFromSymbolStart = "196">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

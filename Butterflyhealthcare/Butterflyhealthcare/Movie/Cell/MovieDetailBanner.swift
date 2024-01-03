@@ -55,6 +55,29 @@ class MovieDetailBanner: UITableViewCell {
         gradientView.layer.addSublayer(gradientLayerGray)
        
     }
+    
+    
+    public func configureOffline(with MovieResult: Movie , indexpath:NSIndexPath, isfirstObject:Bool,isLastObject:Bool){
+        lbl_MovieTitle.text = MovieResult.originalTitle
+        lbl_ReleaseDate.text = "Release Date: " + (MovieResult.releaseDate ?? "")
+        
+        let commonUrlsAndConstants = CommonUrlsAndConstants()
+        let urls_BaseUpi : String = commonUrlsAndConstants.getPosterImageBaseUrl()
+        let urls_endPoint = MovieResult.posterPath ?? "/tlcuhdNMKNGEVpGqBZrAaOOf1A6.jpg"
+        let urlFull = urls_BaseUpi + urls_endPoint
+        guard let url = URL(string: urlFull) else {
+            return
+        }
+        
+        ImageLoader.downloaded(from: url)
+        
+        let gradientLayerGray:CAGradientLayer = CAGradientLayer()
+        gradientLayerGray.frame.size = self.gradientView.frame.size
+        gradientLayerGray.colors =
+        [UIColor.white.cgColor,UIColor.green .withAlphaComponent(1).cgColor ]
+        gradientView.layer.addSublayer(gradientLayerGray)
+       
+    }
 
     
     public func configureSearch(with MovieResult:SearchMovieViewModel.SearchMovieResultViewModelStruct? , indexpath:NSIndexPath, isfirstObject:Bool,isLastObject:Bool){
