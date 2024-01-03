@@ -187,7 +187,6 @@ extension SearchViewController{
 
 extension SearchViewController:UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        self.searchMovieList(searchText: searchText)
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -206,6 +205,8 @@ extension SearchViewController:UISearchBarDelegate{
     }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+        self.searchMovieList(searchText: searchBar.text ?? "")
+
     }
 }
 
