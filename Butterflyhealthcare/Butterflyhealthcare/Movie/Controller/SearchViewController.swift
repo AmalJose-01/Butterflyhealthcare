@@ -46,6 +46,11 @@ class SearchViewController: UIViewController {
     
     
     func searchMovieList(searchText : String){
+        
+        
+        let utilReach = UtilReach()
+        if (utilReach.connectionStatus()) {
+        
         //let inputData = Data()
         self.Obj_SearchMovieViewModel.TempMovieList.value?.removeAll()
         self.Obj_SearchMovieViewModel.SearchMovieList.value?.removeAll()
@@ -65,6 +70,10 @@ class SearchViewController: UIViewController {
                 }
                 self.setSearchListMovie(outputData: data)
             }
+        }
+        }else{
+            self.noInterNetAvailableAlert(title: "Attention", message: "Unable to connect to server. Please check your internet connection.")
+
         }
     }
     
@@ -104,6 +113,18 @@ class SearchViewController: UIViewController {
         }
     }
     
+    
+    func noInterNetAvailableAlert(title:String,message:String){
+        DispatchQueue.main.async {
+            let title = title
+            let message = message
+            let alert = UIAlertController(title:title, message:message,preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { _ in
+                return
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
     
     
     
