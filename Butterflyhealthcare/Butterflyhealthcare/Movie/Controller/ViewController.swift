@@ -10,6 +10,7 @@ import SVProgressHUD
 import CoreData
 
 class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
+    @IBOutlet weak var searchBarHeightConstraint: NSLayoutConstraint!
     private var viewModelClass = MovieViewModel()
     private var Obj_MovieViewModel = MovieViewModel.MovieViewModelStruct()
     var isSearch = false
@@ -40,18 +41,21 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
         let utilReach = UtilReach()
         if (utilReach.connectionStatus()) {
              isOfflineMode = false
+            searchBarHeightConstraint.constant = 58
+            searchBar.isHidden = false
             self.getMovieList()
         }else{
              isOfflineMode = true
+            searchBarHeightConstraint.constant = 0
+            searchBar.isHidden = true
             context = appDelegate.persistentContainer.viewContext
-            fetchedResultsController = NSFetchedResultsController(fetchRequest: allEmployeesFetchRequest(), managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+            fetchedResultsController = NSFetchedResultsController(fetchRequest: viewModelClass.allEmployeesFetchRequest(), managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
                 fetchedResultsController?.delegate = self
             do {
                 try fetchedResultsController?.performFetch()
             } catch {
-                print("Storing data Failed")
+//                print("Storing data Failed")
             }
-//            self.fetchData()
         }
         
        
@@ -79,12 +83,12 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
                 DispatchQueue.main.async {
                     SVProgressHUD.dismiss()
                 }
-                self.setRefrentialDataViewModel(outputData: data)
+                self.setMovieListDataViewModel(outputData: data)
             }
         }
     }
     
-    func setRefrentialDataViewModel(outputData:Data){
+    func setMovieListDataViewModel(outputData:Data){
         
         do {
             let MovieResponse = try JSONDecoder().decode(MovieModel.MovieResponse.self, from: outputData)
@@ -94,7 +98,7 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
                 MovieViewModel.MovieResultViewModelStruct(adult: $0.adult ?? true, backdropPath: $0.backdropPath ?? "", genreids: $0.genreids , id: $0.id ?? 0, originalLanguage: $0.originalLanguage , originalTitle: $0.originalTitle ?? "", overview: $0.overview ?? "", popularity: $0.popularity ?? 0, posterPath: $0.posterPath ?? "",releaseDate: $0.releaseDate ?? "" , title: $0.title ?? "", video: $0.video ?? true, voteAverage: $0.voteAverage ?? 0, voteCount: $0.voteCount ?? 0)
             })
             
-            self.OfflineSave_AfterOnlineSave(inputArray: MovieResponse.results)
+            self.viewModelClass.OfflineSave_AfterOnlineSave(inputArray: MovieResponse.results)
             
             DispatchQueue.main.async {
                 SVProgressHUD.dismiss()
@@ -110,38 +114,7 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
     }
     
     
-    func OfflineSave_AfterOnlineSave(inputArray:[MovieModel.Result]?){
-        self.deleteAllData("Movie")
-        guard let valuesArray = inputArray else { return }
-        for input in valuesArray {
-            
-            context = appDelegate.persistentContainer.viewContext
-            let entity = NSEntityDescription.entity(forEntityName: "Movie", in: context)
-            let newUser = NSManagedObject(entity: entity!, insertInto: context)
-            saveData(UserDBObj: newUser, CurrentMFAobject: input)
-        }
-    }
     
-    
-    func saveData(UserDBObj:NSManagedObject, CurrentMFAobject : MovieViewModel.MovieResultViewModelStruct?)
-       {
-           UserDBObj.setValue(CurrentMFAobject?.originalTitle, forKey: "originalTitle")
-           UserDBObj.setValue(CurrentMFAobject?.overview, forKey: "overview")
-           UserDBObj.setValue(CurrentMFAobject?.posterPath, forKey: "posterPath")
-           UserDBObj.setValue(CurrentMFAobject?.releaseDate, forKey: "releaseDate")
-           UserDBObj.setValue(CurrentMFAobject?.title, forKey: "title")
-           UserDBObj.setValue(CurrentMFAobject?.voteAverage, forKey: "voteAverage")
-           UserDBObj.setValue(CurrentMFAobject?.voteCount, forKey: "voteCount")
-
-           print("Storing Data..")
-           do {
-               try context.save()
-           } catch {
-               print("Storing data Failed")
-           }
-           
-           self.fetchData()
-       }
     
     
     func fetchData()
@@ -157,39 +130,9 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
             }
         }
     
-    func allEmployeesFetchRequest() -> NSFetchRequest<NSFetchRequestResult> {
-        
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Movie")
-        fetchRequest.predicate = nil
-        
-        let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
-
-                fetchRequest.predicate = nil
-                fetchRequest.sortDescriptors = [sortDescriptor]
-                fetchRequest.fetchBatchSize = 20
-        return fetchRequest
-    }
     
     
-    func deleteAllData(_ entity:String) {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Movie")
-        fetchRequest.returnsObjectsAsFaults = false
-//        let managedContext = appDelegate.managedObjectContext
-
-        do {
-            
-            let results = try context.fetch(fetchRequest)
-                   for managedObject in results
-                   {
-                       let managedObjectData:NSManagedObject = managedObject as! NSManagedObject
-                       context.delete(managedObjectData)
-                   }
-            
-            
-        } catch let error {
-            print("Detele all data in \(entity) error :", error)
-        }
-    }
+    
     
 }
 
@@ -236,13 +179,7 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
                 
                 if let cellContact = fetchedResultsController?.object(at: indexPath) as? Movie {
                     customCell.configureForOffline(with: cellContact, indexpath: indexPath as NSIndexPath, isfirstObject: true, isLastObject: true)
-
                 }
-
-                
-                
-                
-                
                 return customCell
             }else{
                 
@@ -299,6 +236,8 @@ extension ViewController{
         let transition = CATransition()
         transition.duration = 0.3
         transition.type = .fade
+        manageSubscriptionViewController.fromClass = NSStringFromClass(type(of: self))
+
         self.navigationController?.view.layer.add(transition, forKey: kCATransition)
         self.navigationController?.pushViewController(manageSubscriptionViewController, animated: false)
     }
@@ -338,84 +277,3 @@ extension ViewController:UISearchBarDelegate{
     }
 }
 
-//
-//extension ViewController:UIScrollViewDelegate{
-//    
-//    
-//    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-//        
-//        print("scrollViewWillBeginDragging")
-//        //  isDataLoading = false
-//    }
-//    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
-//        print("scrollViewWillBeginDecelerating")
-//    }
-//    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-//        print("scrollViewDidEndScrollingAnimation")
-//    }
-//    
-//    
-//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//        print("scrollViewDidEndDecelerating")
-//    }
-//    //Pagination
-//    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-//        
-//        print("scrollViewDidEndDragging")
-//        if ((tbl_MovieList.contentOffset.y + tbl_MovieList.frame.size.height) >= tbl_MovieList.contentSize.height)
-//        {
-//            if !isDataLoading{
-//                DispatchQueue.main.async {
-//                    self.activityIndicator.startAnimating()
-//                }
-//                //isDataLoading = true
-//                var dataCount : Int
-//                if(isSearch){
-//                    dataCount =  self.Obj_MovieViewModel.SearchMovieList.value?.count ?? 0
-//                }else{
-//                    dataCount =   self.Obj_MovieViewModel.MovieList.value?.count ?? 0
-//                }
-//                
-//                
-//                if dataCount > 20 {
-//                    self.offset=tempArr.count
-//                    self.limit=self.offset+20
-//                    addContactsList(offset: self.offset, limit: self.limit)
-//                    
-//                }
-//                
-//            }
-//            
-//            
-//        }
-//        
-//        
-//    }
-//    
-//    func addContactsList(offset:Int,limit:Int){
-//        
-//        var dataCount : Int
-//        if(isSearch){
-//            dataCount =  self.Obj_MovieViewModel.SearchMovieList.value?.count ?? 0
-//        }else{
-//            dataCount =   self.Obj_MovieViewModel.MovieList.value?.count ?? 0
-//        }
-//        
-//        
-//        if dataCount > limit{
-//            
-//            for i in offset..<limit{
-//                tempArr.append(results[i])
-//            }
-//            self.tbl_MovieList.reloadData()
-//        }else{
-//            for i in offset..< dataCount{
-//                tempArr.append(results[i])
-//            }
-//            self.tbl_MovieList.reloadData()
-//            self.tbl_MovieList.tableFooterView?.isHidden=true
-//            self.isDataLoading = true
-//            
-//        }
-//    }
-//}

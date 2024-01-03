@@ -13,6 +13,10 @@ class MovieDetailViewController: UIViewController {
 //    private var viewModelClass = MovieViewModel()
 //    private var Obj_MovieViewModel = MovieViewModel.MovieViewModelStruct()
     var CurrentMFAobject : MovieViewModel.MovieResultViewModelStruct?
+    var SearchCurrentMFAobject : SearchMovieViewModel.SearchMovieResultViewModelStruct?
+
+
+    var fromClass : String = ""
 
     @IBOutlet weak var tbl_MovieList: UITableView!
     
@@ -61,8 +65,12 @@ extension MovieDetailViewController:UITableViewDataSource,UITableViewDelegate{
             customCell.selectionStyle = UITableViewCell.SelectionStyle.none
             customCell.accessoryType = UITableViewCell.AccessoryType.none
             //          customCell.delegate=self
-            
-            customCell.configure(with: CurrentMFAobject, indexpath: indexPath as NSIndexPath, isfirstObject: true, isLastObject: true)
+            if(fromClass == "eVeroVisit.ViewController"){
+                customCell.configure(with: CurrentMFAobject, indexpath: indexPath as NSIndexPath, isfirstObject: true, isLastObject: true)
+
+            }else{
+                customCell.configureSearch(with: SearchCurrentMFAobject, indexpath: indexPath as NSIndexPath, isfirstObject: true, isLastObject: true)
+            }
             
             return customCell
         }else{
@@ -70,8 +78,15 @@ extension MovieDetailViewController:UITableViewDataSource,UITableViewDelegate{
             customCell.selectionStyle = UITableViewCell.SelectionStyle.none
             customCell.accessoryType = UITableViewCell.AccessoryType.none
 //            customCell.delegate=self
-            customCell.configure(with: CurrentMFAobject, indexpath: indexPath as NSIndexPath, isfirstObject: true, isLastObject: true)
+            
 
+            if(fromClass == "eVeroVisit.ViewController"){
+                customCell.configure(with: CurrentMFAobject, indexpath: indexPath as NSIndexPath, isfirstObject: true, isLastObject: true)
+            }else{
+                customCell.configureSearch(with: SearchCurrentMFAobject, indexpath: indexPath as NSIndexPath, isfirstObject: true, isLastObject: true)
+            }
+            
+            
             return customCell
         }
     }

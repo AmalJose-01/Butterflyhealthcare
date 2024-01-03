@@ -31,7 +31,7 @@ class MovieModel: NSObject {
         var backdropPath: String?
         var genreids: [Int]?
         var id: Int?
-        var originalLanguage: OriginalLanguage?
+        var originalLanguage: String?
         var originalTitle: String?
         var overview: String?
         var popularity: Double?

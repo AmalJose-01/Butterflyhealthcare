@@ -32,4 +32,11 @@ class MoviedetailOverviewCell: UITableViewCell {
         
         
     }
+    
+    public func configureSearch(with MovieResult:SearchMovieViewModel.SearchMovieResultViewModelStruct? , indexpath:NSIndexPath, isfirstObject:Bool,isLastObject:Bool){
+        lbl_OverViewValue.text = MovieResult?.overview
+        
+        
+    }
+    
 }

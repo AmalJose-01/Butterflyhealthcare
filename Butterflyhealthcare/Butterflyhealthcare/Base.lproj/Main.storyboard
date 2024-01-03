@@ -125,6 +125,9 @@
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="rUK-YC-un8">
                                 <rect key="frame" x="4" y="103" width="385" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="q7a-PH-BJR"/>
+                                </constraints>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="K7f-1K-kCV" id="5Zn-d8-cfD"/>
@@ -146,6 +149,7 @@
                     <navigationItem key="navigationItem" id="G9W-Va-rp3"/>
                     <connections>
                         <outlet property="searchBar" destination="rUK-YC-un8" id="kSn-uf-suc"/>
+                        <outlet property="searchBarHeightConstraint" destination="q7a-PH-BJR" id="PHO-gf-HhS"/>
                         <outlet property="tbl_MovieList" destination="Nx8-qR-UcK" id="AMu-JI-tVt"/>
                     </connections>
                 </viewController>

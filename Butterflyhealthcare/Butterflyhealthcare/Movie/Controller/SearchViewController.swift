@@ -47,6 +47,10 @@ class SearchViewController: UIViewController {
     
     func searchMovieList(searchText : String){
         //let inputData = Data()
+        self.Obj_SearchMovieViewModel.TempMovieList.value?.removeAll()
+        self.Obj_SearchMovieViewModel.SearchMovieList.value?.removeAll()
+        
+        
         SVProgressHUD.show(withStatus: "Search Movie....")
         self.viewModelClass.searchMovieList(query: searchText , page: pageNo) { result, outputData in
             DispatchQueue.main.async {
@@ -160,26 +164,28 @@ extension SearchViewController:UITableViewDataSource,UITableViewDelegate{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var CurrentMFAobject : SearchMovieViewModel.SearchMovieResultViewModelStruct?
-        if(isSearch){
-            CurrentMFAobject = self.Obj_SearchMovieViewModel.SearchMovieList.value?[indexPath.row]
-        }else{
-//            CurrentMFAobject = self.Obj_MovieViewModel.MovieList.value?[indexPath.row]
-        }
+        //        if(isSearch){
+        CurrentMFAobject = self.Obj_SearchMovieViewModel.SearchMovieList.value?[indexPath.row]
+        //        }else{
+        //            CurrentMFAobject = self.Obj_MovieViewModel.MovieList.value?[indexPath.row]
+        //        }
         
-//        self.clickRedirectAction(MovieResult: CurrentMFAobject)
+                self.clickRedirectAction(MovieResult: CurrentMFAobject)
     }
 }
 
 
 extension SearchViewController{
-    func clickRedirectAction(MovieResult:MovieViewModel.MovieResultViewModelStruct?) {
+    func clickRedirectAction(MovieResult:SearchMovieViewModel.SearchMovieResultViewModelStruct?) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let manageSubscriptionViewController = storyboard.instantiateViewController(withIdentifier: "MovieDetailViewControllerID")
         as! MovieDetailViewController
-        manageSubscriptionViewController.CurrentMFAobject = MovieResult
+        manageSubscriptionViewController.SearchCurrentMFAobject = MovieResult
         let transition = CATransition()
         transition.duration = 0.3
         transition.type = .fade
+        manageSubscriptionViewController.fromClass = NSStringFromClass(type(of: self))
+
         self.navigationController?.view.layer.add(transition, forKey: kCATransition)
         self.navigationController?.pushViewController(manageSubscriptionViewController, animated: false)
     }
@@ -187,6 +193,15 @@ extension SearchViewController{
 
 extension SearchViewController:UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+       
+        let remainder = searchText.count % 3
+
+        if searchText.count % 3 == 0 {
+           
+            self.searchMovieList(searchText: searchBar.text ?? "")
+        }
+        
+        
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
